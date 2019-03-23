@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LanuchIntegrationProcessAsync">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pRequest" type="tns:LanuchIntegrationProcessRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LanuchIntegrationProcessRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Parameters" type="tns:ArrayOfParameterInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RequestBase" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:DisposableBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="RequestDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="RequestUser" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DisposableBase" abstract="true" />
+      <s:complexType name="ResponseBase" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:DisposableBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Request" type="tns:RequestBase" />
+              <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:OperationStatus" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatusDescription" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="OperationStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Succeeded" />
+          <s:enumeration value="Failed" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="LanuchIntegrationProcessResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseBase" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DTOBase" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:DisposableBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="GroupingField_Level_1" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GroupingField_Level_2" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreationUser" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreationDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastUpdateUser" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUpdate" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ParameterInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:DTOBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="SystemParameter" type="tns:SystemParameter" />
+              <s:element minOccurs="0" maxOccurs="1" name="ParameterValue" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="SystemParameter">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="code" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfParameterInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ParameterInfo" nillable="true" type="tns:ParameterInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LanuchIntegrationProcessAsyncResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LanuchIntegrationProcessAsyncResult" type="tns:LanuchIntegrationProcessResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LanuchIntegrationProcessAsyncSoapIn">
+    <wsdl:part name="parameters" element="tns:LanuchIntegrationProcessAsync" />
+  </wsdl:message>
+  <wsdl:message name="LanuchIntegrationProcessAsyncSoapOut">
+    <wsdl:part name="parameters" element="tns:LanuchIntegrationProcessAsyncResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AppsTalkWebServiceInterfaceSoap">
+    <wsdl:operation name="LanuchIntegrationProcessAsync">
+      <wsdl:input message="tns:LanuchIntegrationProcessAsyncSoapIn" />
+      <wsdl:output message="tns:LanuchIntegrationProcessAsyncSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AppsTalkWebServiceInterfaceSoap" type="tns:AppsTalkWebServiceInterfaceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LanuchIntegrationProcessAsync">
+      <soap:operation soapAction="http://tempuri.org/LanuchIntegrationProcessAsync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AppsTalkWebServiceInterfaceSoap12" type="tns:AppsTalkWebServiceInterfaceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LanuchIntegrationProcessAsync">
+      <soap12:operation soapAction="http://tempuri.org/LanuchIntegrationProcessAsync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AppsTalkWebServiceInterface">
+    <wsdl:port name="AppsTalkWebServiceInterfaceSoap" binding="tns:AppsTalkWebServiceInterfaceSoap">
+      <soap:address location="http://localhost/AppsTalkWebService/AppsTalkWebServiceInterface.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AppsTalkWebServiceInterfaceSoap12" binding="tns:AppsTalkWebServiceInterfaceSoap12">
+      <soap12:address location="http://localhost/AppsTalkWebService/AppsTalkWebServiceInterface.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

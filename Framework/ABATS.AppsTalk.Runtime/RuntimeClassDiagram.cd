@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ABATS.AppsTalk.Runtime.Common.Requests.ProcessExecutionRequest" Collapsed="true">
+    <Position X="18.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Requests\ProcessExecutionRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Common.Responses.AdapterQueryResponse" Collapsed="true">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAQAAAAAAAAAAAAAAAEAAgABAgAAAAAI=</HashCode>
+      <FileName>Common\Responses\AdapterQueryResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Common.Responses.AdapterResponse" Collapsed="true">
+    <Position X="2" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Responses\AdapterResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Common.Responses.DestinationAdapterResponse" Collapsed="true">
+    <Position X="0.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Responses\DestinationAdapterResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Common.Responses.ProcessExecutionResponse" Collapsed="true">
+    <Position X="15" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEQABBAAAAAAAAAAAABAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Responses\ProcessExecutionResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Common.Responses.SourceAdapterResponse" Collapsed="true">
+    <Position X="3" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Responses\SourceAdapterResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.AppRuntime" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAACCAARAAAAABIAADACAQAECEAAAAAAAAAAECA=</HashCode>
+      <FileName>Runtime\AppRuntime.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.AppRuntimeComponent" Collapsed="true">
+    <Position X="4.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Runtime\AppRuntimeManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.AppRuntimeFactory" Collapsed="true">
+    <Position X="15" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Runtime\IAppRuntimeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.AppServiceBase" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\AppServiceBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Core.Adapters.AbstractAdapter" Collapsed="true">
+    <Position X="2" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAIAAQAAAAAAAAAAAAAAAAQAAAAAAAAAAAIAAAQAA=</HashCode>
+      <FileName>Services\Core\Adapters\AbstractAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Core.Adapters.AdapterFactory" Collapsed="true">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Core\Adapters\AdapterFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Core.Adapters.DBAdapter" Collapsed="true">
+    <Position X="1" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAQAA=</HashCode>
+      <FileName>Services\Core\Adapters\DBAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Core.Adapters.WSAdapter" Collapsed="true">
+    <Position X="3.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAQAA=</HashCode>
+      <FileName>Services\Core\Adapters\WSAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Core.CoreService" Collapsed="true">
+    <Position X="10.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCAAAAAAAAAAAQAAAAAAAAAAAAAAAEAEAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Core\CoreService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Core.DBProviders.AbstractDBProvider" Collapsed="true">
+    <Position X="6.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAABgACQAAACAAAEAAAAA=</HashCode>
+      <FileName>Services\Core\DBProviders\AbstractDBProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Core.DBProviders.DBProviderFactory" Collapsed="true">
+    <Position X="16.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Services\Core\DBProviders\DBProviderFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Core.DBProviders.OracleProvider" Collapsed="true">
+    <Position X="5.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAUAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Core\DBProviders\OracleProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Core.DBProviders.SQLProvider" Collapsed="true">
+    <Position X="7.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAUAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Core\DBProviders\SQLProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Data.DataService" Collapsed="true">
+    <Position X="12.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>lAAAAAAAABAAAQAAAABFAAAkCAAAQEAAAogAAEAAAAA=</HashCode>
+      <FileName>Services\Data\DataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Metadata.MetadataService" Collapsed="true">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Metadata\MetadataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Reports.ReportsService" Collapsed="true">
+    <Position X="8" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Reports\ReportsService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Security.SecurityService" Collapsed="true">
+    <Position X="1.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAQAAAEBAAAAAAAAAAEBAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Security\SecurityService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ABATS.AppsTalk.Runtime.Services.Settings.SettingsService" Collapsed="true">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAQAAQCAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Settings\SettingsService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ABATS.AppsTalk.Runtime.IAppRuntime" Collapsed="true">
+    <Position X="15" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAABAAADAAAQAACAAAAAAAAAAAACA=</HashCode>
+      <FileName>Runtime\IAppRuntime.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ABATS.AppsTalk.Runtime.IAppRuntimeComponent" Collapsed="true">
+    <Position X="16.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Runtime\IAppRuntimeComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ABATS.AppsTalk.Runtime.Services.IAppService" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\IAppService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ABATS.AppsTalk.Runtime.Services.Core.ICoreService" Collapsed="true">
+    <Position X="1.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Core\ICoreService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ABATS.AppsTalk.Runtime.Services.Data.IDataService" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAAAAAAABAAAAAAAABFAAAACAAAAAAAAogAAEAAAAA=</HashCode>
+      <FileName>Services\Data\IDataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ABATS.AppsTalk.Runtime.Services.Metadata.IMetadataService" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Metadata\IMetadataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ABATS.AppsTalk.Runtime.Services.Reports.IReportsService" Collapsed="true">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Reports\IReportsService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ABATS.AppsTalk.Runtime.Services.Security.ISecurityService" Collapsed="true">
+    <Position X="12.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Security\ISecurityService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ABATS.AppsTalk.Runtime.Services.Settings.ISettingsService" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Settings\ISettingsService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

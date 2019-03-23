@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Full.Master.cs"
+    Inherits="ABATS.AppsTalk.Full" %>
+
+<%@ Register TagPrefix="AppsTalk" TagName="Header" Src="~/Views/Core/Header.ascx" %>
+<%@ Register TagPrefix="AppsTalk" TagName="Menu" Src="~/Views/Core/Menu.ascx" %>
+<%@ Register TagPrefix="AppsTalk" TagName="Navigator" Src="~/Views/Core/Navigator.ascx" %>
+<%@ Register TagPrefix="AppsTalk" TagName="Footer" Src="~/Views/Core/Footer.ascx" %>
+<asp:Content ID="NestedFullContentPlaceHolder" ContentPlaceHolderID="MainContentPlaceHolder"
+    runat="server">
+    <div id="divHeader" class="headerContainer">
+        <AppsTalk:Header ID="ctrlHeader" runat="server" />
+    </div>
+    <div id="divMenu" class="menuContainer">
+        <AppsTalk:Menu ID="ctrlMenu" runat="server" />
+    </div>
+    <div id="divSiteMap" class="siteMapContainer">
+        <AppsTalk:Navigator ID="ctrlNavigator" runat="server" />
+    </div>
+    <div id="divContents" class="contentContainer">
+        <asp:ContentPlaceHolder ID="FullContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="divFooter">
+        <AppsTalk:Footer ID="ctrlFooter" runat="server" />
+    </div>
+</asp:Content>

@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Workspace\ABATS\Published\AppsTalk\Web</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/ABATS.AppsTalk.Core.dll">
+      <publishTime>06/11/2018 13:51:35</publishTime>
+    </File>
+    <File Include="bin/ABATS.AppsTalk.Data.dll">
+      <publishTime>06/11/2018 13:51:36</publishTime>
+    </File>
+    <File Include="bin/ABATS.AppsTalk.dll">
+      <publishTime>06/11/2018 13:51:41</publishTime>
+    </File>
+    <File Include="bin/ABATS.AppsTalk.Presentation.dll">
+      <publishTime>06/11/2018 13:51:39</publishTime>
+    </File>
+    <File Include="bin/ABATS.AppsTalk.Runtime.dll">
+      <publishTime>06/11/2018 13:51:37</publishTime>
+    </File>
+    <File Include="bin/ABATS.AppsTalk.UX.dll">
+      <publishTime>06/11/2018 13:51:38</publishTime>
+    </File>
+    <File Include="bin/ABATS.AppsTalk.XmlSerializers.dll">
+      <publishTime>06/11/2018 13:51:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/11/2015 20:14:42</publishTime>
+    </File>
+    <File Include="bin/Oracle.ManagedDataAccess.dll">
+      <publishTime>08/11/2015 20:14:49</publishTime>
+    </File>
+    <File Include="Contents/Images/aba_logo.png">
+      <publishTime>08/11/2015 20:14:32</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_calendar.gif">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_cancel.png">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_contacts.gif">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_contact_group.gif">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_delete.gif">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_drafts.gif">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_edit.gif">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_load.png">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_new.gif">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_save.png">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_sent.gif">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_today.gif">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_view.gif">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/Actions/i_you.gif">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Images/admin.png">
+      <publishTime>08/11/2015 20:14:32</publishTime>
+    </File>
+    <File Include="Contents/Images/applyTemplate.png">
+      <publishTime>08/11/2015 20:14:32</publishTime>
+    </File>
+    <File Include="Contents/Images/applyTemplate_small.png">
+      <publishTime>08/11/2015 20:14:32</publishTime>
+    </File>
+    <File Include="Contents/Images/apps.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/background_stripes.gif">
+      <publishTime>08/11/2015 20:14:32</publishTime>
+    </File>
+    <File Include="Contents/Images/bg_box4.png">
+      <publishTime>08/11/2015 20:14:32</publishTime>
+    </File>
+    <File Include="Contents/Images/bg_box5.png">
+      <publishTime>08/11/2015 20:14:32</publishTime>
+    </File>
+    <File Include="Contents/Images/bg_Gray.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/bg_header.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/calendar.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/calendar_small.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/database_128.png">
+      <publishTime>02/04/2017 19:24:23</publishTime>
+    </File>
+    <File Include="Contents/Images/emails.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/emails_small.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/evalute.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/evalute_small.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/followup.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/followup_small.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/footer.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/generalSettings.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/group.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/group_small.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/home_page.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/i_adapter.gif">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/i_dataArrows.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/i_database_150.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/i_edit.gif">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/i_power_16.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/i_power_32.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/letters.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/letters_small.png">
+      <publishTime>08/11/2015 20:14:33</publishTime>
+    </File>
+    <File Include="Contents/Images/list.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/list_small.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/Logo.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/Logo_60.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/mainmenu.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/messages.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/messages_small.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/notes.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/notes_small.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/performancemonitor.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/performancemonitor_small.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/phone.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/phone_small.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/roles.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/roles_small.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/search.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/search_small.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/search_small_16.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/settings.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/settings_small.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/tools.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/user.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/user_small.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/Validation.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Images/webservice_256.png">
+      <publishTime>02/04/2017 19:24:23</publishTime>
+    </File>
+    <File Include="Contents/Images/window_small.png">
+      <publishTime>08/11/2015 20:14:34</publishTime>
+    </File>
+    <File Include="Contents/Scripts/Core.js">
+      <publishTime>02/15/2017 00:47:13</publishTime>
+    </File>
+    <File Include="Contents/Scripts/Kendo/jquery.min.js">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Scripts/Kendo/jquery.min.map">
+      <publishTime>02/14/2017 21:01:20</publishTime>
+    </File>
+    <File Include="Contents/Scripts/Kendo/kendo.all.min.js">
+      <publishTime>08/11/2015 20:14:37</publishTime>
+    </File>
+    <File Include="Contents/Styles/Kendo/Default/editor.png">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Styles/Kendo/Default/imagebrowser.png">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Styles/Kendo/Default/indeterminate.gif">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Styles/Kendo/Default/loading-image.gif">
+      <publishTime>08/11/2015 20:14:36</publishTime>
+    </File>
+    <File Include="Contents/Styles/Kendo/Default/loading.gif">
+      <publishTime>08/11/2015 20:14:36</publishTime>
+    </File>
+    <File Include="Contents/Styles/Kendo/Default/loading_2x.gif">
+      <publishTime>08/11/2015 20:14:36</publishTime>
+    </File>
+    <File Include="Contents/Styles/Kendo/Default/slider-h.gif">
+      <publishTime>08/11/2015 20:14:36</publishTime>
+    </File>
+    <File Include="Contents/Styles/Kendo/Default/slider-v.gif">
+      <publishTime>08/11/2015 20:14:36</publishTime>
+    </File>
+    <File Include="Contents/Styles/Kendo/Default/sprite.png">
+      <publishTime>08/11/2015 20:14:36</publishTime>
+    </File>
+    <File Include="Contents/Styles/Kendo/Default/sprite_2x.png">
+      <publishTime>08/11/2015 20:14:36</publishTime>
+    </File>
+    <File Include="Contents/Styles/Kendo/kendo.common.min.css">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Styles/Kendo/kendo.default.min.css">
+      <publishTime>08/11/2015 20:14:35</publishTime>
+    </File>
+    <File Include="Contents/Styles/Main.css">
+      <publishTime>04/29/2017 12:15:28</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>02/04/2017 19:33:21</publishTime>
+    </File>
+    <File Include="Full.Master">
+      <publishTime>08/11/2015 20:14:32</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/11/2015 20:14:32</publishTime>
+    </File>
+    <File Include="Main.Master">
+      <publishTime>02/17/2017 21:33:17</publishTime>
+    </File>
+    <File Include="Views/Admin/Applications/ApplicationCompactView.ascx">
+      <publishTime>04/29/2017 11:17:08</publishTime>
+    </File>
+    <File Include="Views/Admin/Applications/ApplicationDatabaseQueryView.aspx">
+      <publishTime>10/13/2017 21:29:47</publishTime>
+    </File>
+    <File Include="Views/Admin/Applications/ApplicationDatabaseView.aspx">
+      <publishTime>04/29/2017 11:38:40</publishTime>
+    </File>
+    <File Include="Views/Admin/Applications/ApplicationsList.aspx">
+      <publishTime>04/29/2017 11:17:17</publishTime>
+    </File>
+    <File Include="Views/Admin/Applications/ApplicationView.aspx">
+      <publishTime>06/04/2018 12:51:43</publishTime>
+    </File>
+    <File Include="Views/Admin/Applications/ApplicationWebServiceRequestView.aspx">
+      <publishTime>02/15/2017 00:16:51</publishTime>
+    </File>
+    <File Include="Views/Admin/Applications/ApplicationWebServiceView.aspx">
+      <publishTime>06/04/2018 12:48:43</publishTime>
+    </File>
+    <File Include="Views/Admin/IntegrationProcesses/IntegrationAdapterView.aspx">
+      <publishTime>02/15/2017 01:18:31</publishTime>
+    </File>
+    <File Include="Views/Admin/IntegrationProcesses/IntegrationProcessCompactView.ascx">
+      <publishTime>04/29/2017 12:25:49</publishTime>
+    </File>
+    <File Include="Views/Admin/IntegrationProcesses/IntegrationProcessesList.aspx">
+      <publishTime>04/29/2017 11:43:00</publishTime>
+    </File>
+    <File Include="Views/Admin/IntegrationProcesses/IntegrationProcessMappingView.aspx">
+      <publishTime>04/26/2018 20:34:43</publishTime>
+    </File>
+    <File Include="Views/Admin/IntegrationProcesses/IntegrationProcessView.aspx">
+      <publishTime>04/29/2017 12:12:39</publishTime>
+    </File>
+    <File Include="Views/Core/AuthorizationError.ascx">
+      <publishTime>08/11/2015 20:14:38</publishTime>
+    </File>
+    <File Include="Views/Core/ControlsContainer.aspx">
+      <publishTime>08/11/2015 20:14:39</publishTime>
+    </File>
+    <File Include="Views/Core/Footer.ascx">
+      <publishTime>03/18/2018 19:21:02</publishTime>
+    </File>
+    <File Include="Views/Core/Header.ascx">
+      <publishTime>04/22/2017 13:58:43</publishTime>
+    </File>
+    <File Include="Views/Core/Home.ascx">
+      <publishTime>08/11/2015 20:14:39</publishTime>
+    </File>
+    <File Include="Views/Core/Menu.ascx">
+      <publishTime>02/15/2017 00:06:28</publishTime>
+    </File>
+    <File Include="Views/Core/Navigator.ascx">
+      <publishTime>08/11/2015 20:14:39</publishTime>
+    </File>
+    <File Include="Views/Core/NotAuthorized.aspx">
+      <publishTime>08/11/2015 20:14:39</publishTime>
+    </File>
+    <File Include="Views/Tools/ExecuteIntegrationProcess.aspx">
+      <publishTime>02/04/2017 20:23:07</publishTime>
+    </File>
+    <File Include="Views/Tools/IntegrationProcessHistory.aspx">
+      <publishTime>02/19/2017 22:17:00</publishTime>
+    </File>
+    <File Include="Views/Tools/IntegrationTransactionDetailsView.aspx">
+      <publishTime>02/15/2017 00:37:55</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/11/2018 13:53:26</publishTime>
+    </File>
+    <File Include="Web.sitemap">
+      <publishTime>02/10/2017 23:20:20</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

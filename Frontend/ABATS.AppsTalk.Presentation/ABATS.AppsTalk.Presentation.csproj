@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2811A73-A9DB-48FE-A947-18E7BA8BDA65}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ABATS.AppsTalk.Presentation</RootNamespace>
+    <AssemblyName>ABATS.AppsTalk.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Presenters\Admin\Applications\ApplicationWebServiceRequestPresenter.cs" />
+    <Compile Include="Presenters\Admin\Applications\ApplicationWebServicePresenter.cs" />
+    <Compile Include="Presenters\Admin\Applications\ApplicationPresenter.cs" />
+    <Compile Include="Presenters\Admin\Applications\ApplicationDatabasePresenter.cs" />
+    <Compile Include="Presenters\Admin\IntegrationProcesses\IntegrationAdapterPresenter.cs" />
+    <Compile Include="Presenters\Admin\IntegrationProcesses\IntegrationProcessMappingPresenter.cs" />
+    <Compile Include="Presenters\Admin\Applications\ApplicationDatabaseQueryPresenter.cs" />
+    <Compile Include="Presenters\Admin\IntegrationProcesses\IntegrationProcessPresenter.cs" />
+    <Compile Include="Presenters\Tools\ExecuteIntegrationProcessPresenter.cs" />
+    <Compile Include="Presenters\Tools\IntegrationProcessHistoryPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Extensions.cs" />
+    <Compile Include="Utilities\PresentationUtilities.cs" />
+    <Compile Include="Utilities\WindowInfoBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\ABATS.AppsTalk.Core\ABATS.AppsTalk.Core.csproj">
+      <Project>{EF444266-0646-416C-98E7-2E11B20C48A8}</Project>
+      <Name>ABATS.AppsTalk.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\ABATS.AppsTalk.Data\ABATS.AppsTalk.Data.csproj">
+      <Project>{174EBFBF-C96C-422E-AC60-790C8972C300}</Project>
+      <Name>ABATS.AppsTalk.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\ABATS.AppsTalk.Runtime\ABATS.AppsTalk.Runtime.csproj">
+      <Project>{70522496-67F1-4C43-8A88-1A4E1CC9C99F}</Project>
+      <Name>ABATS.AppsTalk.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\ABATS.AppsTalk.UX\ABATS.AppsTalk.UX.csproj">
+      <Project>{9CDCCCCB-7196-4670-9B2B-31A3873592ED}</Project>
+      <Name>ABATS.AppsTalk.UX</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

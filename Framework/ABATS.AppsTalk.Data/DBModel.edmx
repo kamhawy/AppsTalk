@@ -1,0 +1,1576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="ApplicationDatabaseQueries">
+          <Key>
+            <PropertyRef Name="ApplicationDatabaseQueryID" />
+          </Key>
+          <Property Name="ApplicationDatabaseQueryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicationDatabaseID" Type="int" Nullable="false" />
+          <Property Name="ApplicationDatabaseQueryTitle" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ApplicationDatabaseQueryType" Type="tinyint" Nullable="false" />
+          <Property Name="ApplicationDatabaseQueryCommand" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsAsync" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordStatus" Type="int" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordCreated" Type="datetime" Nullable="false" />
+          <Property Name="RecordLastUpdateBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordLastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ApplicationDatabases">
+          <Key>
+            <PropertyRef Name="ApplicationDatabaseID" />
+          </Key>
+          <Property Name="ApplicationDatabaseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicationID" Type="int" Nullable="false" />
+          <Property Name="ApplicationDatabaseTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ApplicationDatabaseType" Type="int" Nullable="false" />
+          <Property Name="Metadata" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ProviderName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProviderConnectionString" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordStatus" Type="int" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordCreated" Type="datetime" Nullable="false" />
+          <Property Name="RecordLastUpdateBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordLastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Applications">
+          <Key>
+            <PropertyRef Name="ApplicationID" />
+          </Key>
+          <Property Name="ApplicationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicationSymbol" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ApplicationTitle" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ApplicationVersion" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="ApplicationProvider" Type="nvarchar" MaxLength="255" />
+          <Property Name="ApplicationBuisnessArea" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="RecordStatus" Type="int" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordCreated" Type="datetime" Nullable="false" />
+          <Property Name="RecordLastUpdateBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordLastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ApplicationWebServiceRequests">
+          <Key>
+            <PropertyRef Name="ApplicationWebServiceRequestID" />
+          </Key>
+          <Property Name="ApplicationWebServiceRequestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicationWebServiceID" Type="int" Nullable="false" />
+          <Property Name="ApplicationWebServiceRequestTitle" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ApplicationWebServiceRequestType" Type="tinyint" Nullable="false" />
+          <Property Name="ImplementationTypeFullName" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordStatus" Type="int" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordCreated" Type="datetime" Nullable="false" />
+          <Property Name="RecordLastUpdateBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordLastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ApplicationWebServices">
+          <Key>
+            <PropertyRef Name="ApplicationWebServiceID" />
+          </Key>
+          <Property Name="ApplicationWebServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicationID" Type="int" Nullable="false" />
+          <Property Name="ApplicationWebServiceTitle" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ApplicationWebServiceURL" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="AssemblyFullPath" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordStatus" Type="int" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordCreated" Type="datetime" Nullable="false" />
+          <Property Name="RecordLastUpdateBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordLastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IntegrationAdapterCaches">
+          <Key>
+            <PropertyRef Name="IntegrationAdapterCacheID" />
+          </Key>
+          <Property Name="IntegrationAdapterCacheID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IntegrationAdapterID" Type="int" Nullable="false" />
+          <Property Name="CachePrimaryKeys" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CacheStatus" Type="tinyint" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordStatus" Type="int" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordCreated" Type="datetime" Nullable="false" />
+          <Property Name="RecordLastUpdateBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordLastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IntegrationAdapterFields">
+          <Key>
+            <PropertyRef Name="IntegrationAdapterFieldID" />
+          </Key>
+          <Property Name="IntegrationAdapterFieldID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IntegrationAdapterID" Type="int" Nullable="false" />
+          <Property Name="FieldCategory" Type="int" Nullable="false" />
+          <Property Name="FieldName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FieldDataType" Type="int" Nullable="false" />
+          <Property Name="IsPrimaryKey" Type="bit" Nullable="false" />
+          <Property Name="PrimaryKeySequence" Type="tinyint" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordStatus" Type="int" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordCreated" Type="datetime" Nullable="false" />
+          <Property Name="RecordLastUpdateBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordLastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IntegrationAdapters">
+          <Key>
+            <PropertyRef Name="IntegrationAdapterID" />
+          </Key>
+          <Property Name="IntegrationAdapterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IntegrationAdapterTitle" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="IntegrationAdapterType" Type="int" Nullable="false" />
+          <Property Name="EndPointType" Type="tinyint" />
+          <Property Name="ApplicationDatabaseQueryID" Type="int" />
+          <Property Name="ApplicationWebServiceRequestID" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordStatus" Type="int" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordCreated" Type="datetime" Nullable="false" />
+          <Property Name="RecordLastUpdateBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordLastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IntegrationProcesses">
+          <Key>
+            <PropertyRef Name="IntegrationProcessID" />
+          </Key>
+          <Property Name="IntegrationProcessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IntegrationProcessCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IntegrationProcessTitle" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="SourceIntegrationAdapterID" Type="int" />
+          <Property Name="DestinationIntegrationAdapterID" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordStatus" Type="int" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordCreated" Type="datetime" Nullable="false" />
+          <Property Name="RecordLastUpdateBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordLastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IntegrationProcessMappings">
+          <Key>
+            <PropertyRef Name="IntegrationProcessMappingID" />
+          </Key>
+          <Property Name="IntegrationProcessMappingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IntegrationProcessID" Type="int" Nullable="false" />
+          <Property Name="SourceIntegrationAdapterFieldID" Type="int" Nullable="false" />
+          <Property Name="DestinationIntegrationAdapterFieldID" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordStatus" Type="int" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordCreated" Type="datetime" Nullable="false" />
+          <Property Name="RecordLastUpdateBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordLastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IntegrationTransactionDetails">
+          <Key>
+            <PropertyRef Name="IntegrationTransactionDetailID" />
+          </Key>
+          <Property Name="IntegrationTransactionDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IntegrationTransactionID" Type="int" Nullable="false" />
+          <Property Name="IntegrationTransactionDetailStatus" Type="tinyint" Nullable="false" />
+          <Property Name="IntegrationTransactionDetailData" Type="varbinary(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordStatus" Type="int" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordCreated" Type="datetime" Nullable="false" />
+          <Property Name="RecordLastUpdateBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordLastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IntegrationTransactions">
+          <Key>
+            <PropertyRef Name="IntegrationTransactionID" />
+          </Key>
+          <Property Name="IntegrationTransactionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IntegrationTransactionTitle" Type="nvarchar" MaxLength="255" />
+          <Property Name="IntegrationTransactionDate" Type="datetime" Nullable="false" />
+          <Property Name="IntegrationProcessID" Type="int" Nullable="false" />
+          <Property Name="TransactionStatus" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordStatus" Type="int" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordCreated" Type="datetime" Nullable="false" />
+          <Property Name="RecordLastUpdateBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecordLastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SystemGroupObjects">
+          <Key>
+            <PropertyRef Name="SystemGroupObjectID" />
+          </Key>
+          <Property Name="SystemGroupObjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SystemGroupID" Type="int" Nullable="false" />
+          <Property Name="SystemObjectID" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreationUserID" Type="int" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdateUserID" Type="int" Nullable="false" />
+          <Property Name="LastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SystemGroups">
+          <Key>
+            <PropertyRef Name="SystemGroupID" />
+          </Key>
+          <Property Name="SystemGroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SystemGroupName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreationUserID" Type="int" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdateUserID" Type="int" Nullable="false" />
+          <Property Name="LastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SystemObjects">
+          <Key>
+            <PropertyRef Name="SystemObjectID" />
+          </Key>
+          <Property Name="SystemObjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SystemObjectType" Type="tinyint" Nullable="false" />
+          <Property Name="SystemObjectIdentifier" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreationUserID" Type="int" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdateUserID" Type="int" Nullable="false" />
+          <Property Name="LastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SystemUserGroups">
+          <Key>
+            <PropertyRef Name="SystemUserGroupID" />
+          </Key>
+          <Property Name="SystemUserGroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SystemUserID" Type="int" Nullable="false" />
+          <Property Name="SystemGroupID" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreationUserID" Type="int" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdateUserID" Type="int" Nullable="false" />
+          <Property Name="LastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SystemUsers">
+          <Key>
+            <PropertyRef Name="SystemUserID" />
+          </Key>
+          <Property Name="SystemUserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SystemUserNetworkID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="SystemUserFullName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreationUserID" Type="int" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdateUserID" Type="int" Nullable="false" />
+          <Property Name="LastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ApplicationDatabaseQueries_ApplicationDatabases">
+          <End Role="ApplicationDatabases" Type="Self.ApplicationDatabases" Multiplicity="1" />
+          <End Role="ApplicationDatabaseQueries" Type="Self.ApplicationDatabaseQueries" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationDatabases">
+              <PropertyRef Name="ApplicationDatabaseID" />
+            </Principal>
+            <Dependent Role="ApplicationDatabaseQueries">
+              <PropertyRef Name="ApplicationDatabaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ApplicationDatabases_Applications">
+          <End Role="Applications" Type="Self.Applications" Multiplicity="1" />
+          <End Role="ApplicationDatabases" Type="Self.ApplicationDatabases" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applications">
+              <PropertyRef Name="ApplicationID" />
+            </Principal>
+            <Dependent Role="ApplicationDatabases">
+              <PropertyRef Name="ApplicationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ApplicationWebServiceRequests_ApplicationWebServices">
+          <End Role="ApplicationWebServices" Type="Self.ApplicationWebServices" Multiplicity="1" />
+          <End Role="ApplicationWebServiceRequests" Type="Self.ApplicationWebServiceRequests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationWebServices">
+              <PropertyRef Name="ApplicationWebServiceID" />
+            </Principal>
+            <Dependent Role="ApplicationWebServiceRequests">
+              <PropertyRef Name="ApplicationWebServiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ApplicationWebServices_Applications">
+          <End Role="Applications" Type="Self.Applications" Multiplicity="1" />
+          <End Role="ApplicationWebServices" Type="Self.ApplicationWebServices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applications">
+              <PropertyRef Name="ApplicationID" />
+            </Principal>
+            <Dependent Role="ApplicationWebServices">
+              <PropertyRef Name="ApplicationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationAdapterCaches_IntegrationAdapters">
+          <End Role="IntegrationAdapters" Type="Self.IntegrationAdapters" Multiplicity="1" />
+          <End Role="IntegrationAdapterCaches" Type="Self.IntegrationAdapterCaches" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationAdapters">
+              <PropertyRef Name="IntegrationAdapterID" />
+            </Principal>
+            <Dependent Role="IntegrationAdapterCaches">
+              <PropertyRef Name="IntegrationAdapterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationAdapterFields_IntegrationAdapters">
+          <End Role="IntegrationAdapters" Type="Self.IntegrationAdapters" Multiplicity="1" />
+          <End Role="IntegrationAdapterFields" Type="Self.IntegrationAdapterFields" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationAdapters">
+              <PropertyRef Name="IntegrationAdapterID" />
+            </Principal>
+            <Dependent Role="IntegrationAdapterFields">
+              <PropertyRef Name="IntegrationAdapterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationAdapters_ApplicationDatabaseQueries">
+          <End Role="ApplicationDatabaseQueries" Type="Self.ApplicationDatabaseQueries" Multiplicity="0..1" />
+          <End Role="IntegrationAdapters" Type="Self.IntegrationAdapters" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationDatabaseQueries">
+              <PropertyRef Name="ApplicationDatabaseQueryID" />
+            </Principal>
+            <Dependent Role="IntegrationAdapters">
+              <PropertyRef Name="ApplicationDatabaseQueryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationAdapters_ApplicationWebServiceRequests">
+          <End Role="ApplicationWebServiceRequests" Type="Self.ApplicationWebServiceRequests" Multiplicity="0..1" />
+          <End Role="IntegrationAdapters" Type="Self.IntegrationAdapters" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationWebServiceRequests">
+              <PropertyRef Name="ApplicationWebServiceRequestID" />
+            </Principal>
+            <Dependent Role="IntegrationAdapters">
+              <PropertyRef Name="ApplicationWebServiceRequestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationProcesses_IntegrationAdapters_Destination">
+          <End Role="IntegrationAdapters" Type="Self.IntegrationAdapters" Multiplicity="0..1" />
+          <End Role="IntegrationProcesses" Type="Self.IntegrationProcesses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationAdapters">
+              <PropertyRef Name="IntegrationAdapterID" />
+            </Principal>
+            <Dependent Role="IntegrationProcesses">
+              <PropertyRef Name="DestinationIntegrationAdapterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationProcesses_IntegrationAdapters_Source">
+          <End Role="IntegrationAdapters" Type="Self.IntegrationAdapters" Multiplicity="0..1" />
+          <End Role="IntegrationProcesses" Type="Self.IntegrationProcesses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationAdapters">
+              <PropertyRef Name="IntegrationAdapterID" />
+            </Principal>
+            <Dependent Role="IntegrationProcesses">
+              <PropertyRef Name="SourceIntegrationAdapterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationProcessMappings_IntegrationAdapterFields_Destination">
+          <End Role="IntegrationAdapterFields" Type="Self.IntegrationAdapterFields" Multiplicity="1" />
+          <End Role="IntegrationProcessMappings" Type="Self.IntegrationProcessMappings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationAdapterFields">
+              <PropertyRef Name="IntegrationAdapterFieldID" />
+            </Principal>
+            <Dependent Role="IntegrationProcessMappings">
+              <PropertyRef Name="DestinationIntegrationAdapterFieldID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationProcessMappings_IntegrationAdapterFields_Source">
+          <End Role="IntegrationAdapterFields" Type="Self.IntegrationAdapterFields" Multiplicity="1" />
+          <End Role="IntegrationProcessMappings" Type="Self.IntegrationProcessMappings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationAdapterFields">
+              <PropertyRef Name="IntegrationAdapterFieldID" />
+            </Principal>
+            <Dependent Role="IntegrationProcessMappings">
+              <PropertyRef Name="SourceIntegrationAdapterFieldID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationProcessMappings_IntegrationProcesses">
+          <End Role="IntegrationProcesses" Type="Self.IntegrationProcesses" Multiplicity="1" />
+          <End Role="IntegrationProcessMappings" Type="Self.IntegrationProcessMappings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationProcesses">
+              <PropertyRef Name="IntegrationProcessID" />
+            </Principal>
+            <Dependent Role="IntegrationProcessMappings">
+              <PropertyRef Name="IntegrationProcessID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationTransactionDetails_IntegrationTransactions">
+          <End Role="IntegrationTransactions" Type="Self.IntegrationTransactions" Multiplicity="1" />
+          <End Role="IntegrationTransactionDetails" Type="Self.IntegrationTransactionDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationTransactions">
+              <PropertyRef Name="IntegrationTransactionID" />
+            </Principal>
+            <Dependent Role="IntegrationTransactionDetails">
+              <PropertyRef Name="IntegrationTransactionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationTransactions_IntegrationProcesses">
+          <End Role="IntegrationProcesses" Type="Self.IntegrationProcesses" Multiplicity="1" />
+          <End Role="IntegrationTransactions" Type="Self.IntegrationTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationProcesses">
+              <PropertyRef Name="IntegrationProcessID" />
+            </Principal>
+            <Dependent Role="IntegrationTransactions">
+              <PropertyRef Name="IntegrationProcessID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemGroupObjects_SystemGroups">
+          <End Role="SystemGroups" Type="Self.SystemGroups" Multiplicity="1" />
+          <End Role="SystemGroupObjects" Type="Self.SystemGroupObjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemGroups">
+              <PropertyRef Name="SystemGroupID" />
+            </Principal>
+            <Dependent Role="SystemGroupObjects">
+              <PropertyRef Name="SystemGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemGroupObjects_SystemObjects">
+          <End Role="SystemObjects" Type="Self.SystemObjects" Multiplicity="1" />
+          <End Role="SystemGroupObjects" Type="Self.SystemGroupObjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemObjects">
+              <PropertyRef Name="SystemObjectID" />
+            </Principal>
+            <Dependent Role="SystemGroupObjects">
+              <PropertyRef Name="SystemObjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUserGroups_SystemGroups">
+          <End Role="SystemGroups" Type="Self.SystemGroups" Multiplicity="1" />
+          <End Role="SystemUserGroups" Type="Self.SystemUserGroups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemGroups">
+              <PropertyRef Name="SystemGroupID" />
+            </Principal>
+            <Dependent Role="SystemUserGroups">
+              <PropertyRef Name="SystemGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUserGroups_SystemUsers">
+          <End Role="SystemUsers" Type="Self.SystemUsers" Multiplicity="1" />
+          <End Role="SystemUserGroups" Type="Self.SystemUserGroups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUsers">
+              <PropertyRef Name="SystemUserID" />
+            </Principal>
+            <Dependent Role="SystemUserGroups">
+              <PropertyRef Name="SystemUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBModelStoreContainer">
+          <EntitySet Name="ApplicationDatabaseQueries" EntityType="Self.ApplicationDatabaseQueries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationDatabases" EntityType="Self.ApplicationDatabases" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Applications" EntityType="Self.Applications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationWebServiceRequests" EntityType="Self.ApplicationWebServiceRequests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationWebServices" EntityType="Self.ApplicationWebServices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IntegrationAdapterCaches" EntityType="Self.IntegrationAdapterCaches" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IntegrationAdapterFields" EntityType="Self.IntegrationAdapterFields" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IntegrationAdapters" EntityType="Self.IntegrationAdapters" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IntegrationProcesses" EntityType="Self.IntegrationProcesses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IntegrationProcessMappings" EntityType="Self.IntegrationProcessMappings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IntegrationTransactionDetails" EntityType="Self.IntegrationTransactionDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IntegrationTransactions" EntityType="Self.IntegrationTransactions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemGroupObjects" EntityType="Self.SystemGroupObjects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemGroups" EntityType="Self.SystemGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemObjects" EntityType="Self.SystemObjects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemUserGroups" EntityType="Self.SystemUserGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemUsers" EntityType="Self.SystemUsers" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ApplicationDatabaseQueries_ApplicationDatabases" Association="Self.FK_ApplicationDatabaseQueries_ApplicationDatabases">
+            <End Role="ApplicationDatabases" EntitySet="ApplicationDatabases" />
+            <End Role="ApplicationDatabaseQueries" EntitySet="ApplicationDatabaseQueries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ApplicationDatabases_Applications" Association="Self.FK_ApplicationDatabases_Applications">
+            <End Role="Applications" EntitySet="Applications" />
+            <End Role="ApplicationDatabases" EntitySet="ApplicationDatabases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ApplicationWebServiceRequests_ApplicationWebServices" Association="Self.FK_ApplicationWebServiceRequests_ApplicationWebServices">
+            <End Role="ApplicationWebServices" EntitySet="ApplicationWebServices" />
+            <End Role="ApplicationWebServiceRequests" EntitySet="ApplicationWebServiceRequests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ApplicationWebServices_Applications" Association="Self.FK_ApplicationWebServices_Applications">
+            <End Role="Applications" EntitySet="Applications" />
+            <End Role="ApplicationWebServices" EntitySet="ApplicationWebServices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationAdapterCaches_IntegrationAdapters" Association="Self.FK_IntegrationAdapterCaches_IntegrationAdapters">
+            <End Role="IntegrationAdapters" EntitySet="IntegrationAdapters" />
+            <End Role="IntegrationAdapterCaches" EntitySet="IntegrationAdapterCaches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationAdapterFields_IntegrationAdapters" Association="Self.FK_IntegrationAdapterFields_IntegrationAdapters">
+            <End Role="IntegrationAdapters" EntitySet="IntegrationAdapters" />
+            <End Role="IntegrationAdapterFields" EntitySet="IntegrationAdapterFields" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationAdapters_ApplicationDatabaseQueries" Association="Self.FK_IntegrationAdapters_ApplicationDatabaseQueries">
+            <End Role="ApplicationDatabaseQueries" EntitySet="ApplicationDatabaseQueries" />
+            <End Role="IntegrationAdapters" EntitySet="IntegrationAdapters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationAdapters_ApplicationWebServiceRequests" Association="Self.FK_IntegrationAdapters_ApplicationWebServiceRequests">
+            <End Role="ApplicationWebServiceRequests" EntitySet="ApplicationWebServiceRequests" />
+            <End Role="IntegrationAdapters" EntitySet="IntegrationAdapters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationProcesses_IntegrationAdapters_Destination" Association="Self.FK_IntegrationProcesses_IntegrationAdapters_Destination">
+            <End Role="IntegrationAdapters" EntitySet="IntegrationAdapters" />
+            <End Role="IntegrationProcesses" EntitySet="IntegrationProcesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationProcesses_IntegrationAdapters_Source" Association="Self.FK_IntegrationProcesses_IntegrationAdapters_Source">
+            <End Role="IntegrationAdapters" EntitySet="IntegrationAdapters" />
+            <End Role="IntegrationProcesses" EntitySet="IntegrationProcesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationProcessMappings_IntegrationAdapterFields_Destination" Association="Self.FK_IntegrationProcessMappings_IntegrationAdapterFields_Destination">
+            <End Role="IntegrationAdapterFields" EntitySet="IntegrationAdapterFields" />
+            <End Role="IntegrationProcessMappings" EntitySet="IntegrationProcessMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationProcessMappings_IntegrationAdapterFields_Source" Association="Self.FK_IntegrationProcessMappings_IntegrationAdapterFields_Source">
+            <End Role="IntegrationAdapterFields" EntitySet="IntegrationAdapterFields" />
+            <End Role="IntegrationProcessMappings" EntitySet="IntegrationProcessMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationProcessMappings_IntegrationProcesses" Association="Self.FK_IntegrationProcessMappings_IntegrationProcesses">
+            <End Role="IntegrationProcesses" EntitySet="IntegrationProcesses" />
+            <End Role="IntegrationProcessMappings" EntitySet="IntegrationProcessMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationTransactionDetails_IntegrationTransactions" Association="Self.FK_IntegrationTransactionDetails_IntegrationTransactions">
+            <End Role="IntegrationTransactions" EntitySet="IntegrationTransactions" />
+            <End Role="IntegrationTransactionDetails" EntitySet="IntegrationTransactionDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationTransactions_IntegrationProcesses" Association="Self.FK_IntegrationTransactions_IntegrationProcesses">
+            <End Role="IntegrationProcesses" EntitySet="IntegrationProcesses" />
+            <End Role="IntegrationTransactions" EntitySet="IntegrationTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemGroupObjects_SystemGroups" Association="Self.FK_SystemGroupObjects_SystemGroups">
+            <End Role="SystemGroups" EntitySet="SystemGroups" />
+            <End Role="SystemGroupObjects" EntitySet="SystemGroupObjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemGroupObjects_SystemObjects" Association="Self.FK_SystemGroupObjects_SystemObjects">
+            <End Role="SystemObjects" EntitySet="SystemObjects" />
+            <End Role="SystemGroupObjects" EntitySet="SystemGroupObjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUserGroups_SystemGroups" Association="Self.FK_SystemUserGroups_SystemGroups">
+            <End Role="SystemGroups" EntitySet="SystemGroups" />
+            <End Role="SystemUserGroups" EntitySet="SystemUserGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUserGroups_SystemUsers" Association="Self.FK_SystemUserGroups_SystemUsers">
+            <End Role="SystemUsers" EntitySet="SystemUsers" />
+            <End Role="SystemUserGroups" EntitySet="SystemUserGroups" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="IntegrationAdapterFields" EntityType="DBModel.IntegrationAdapterField" />
+          <EntitySet Name="IntegrationProcesses" EntityType="DBModel.IntegrationProcess" />
+          <EntitySet Name="IntegrationProcessMappings" EntityType="DBModel.IntegrationProcessMapping" />
+          <EntitySet Name="IntegrationTransactionDetails" EntityType="DBModel.IntegrationTransactionDetail" />
+          <EntitySet Name="IntegrationTransactions" EntityType="DBModel.IntegrationTransaction" />
+          <AssociationSet Name="FK_IntegrationProcessMappings_IntegrationAdapterFields_Destination" Association="DBModel.FK_IntegrationProcessMappings_IntegrationAdapterFields_Destination">
+            <End Role="IntegrationAdapterField" EntitySet="IntegrationAdapterFields" />
+            <End Role="IntegrationProcessMapping" EntitySet="IntegrationProcessMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationProcessMappings_IntegrationAdapterFields_Source" Association="DBModel.FK_IntegrationProcessMappings_IntegrationAdapterFields_Source">
+            <End Role="IntegrationAdapterField" EntitySet="IntegrationAdapterFields" />
+            <End Role="IntegrationProcessMapping" EntitySet="IntegrationProcessMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationProcessMappings_IntegrationProcesses" Association="DBModel.FK_IntegrationProcessMappings_IntegrationProcesses">
+            <End Role="IntegrationProcess" EntitySet="IntegrationProcesses" />
+            <End Role="IntegrationProcessMapping" EntitySet="IntegrationProcessMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationTransactions_IntegrationProcesses" Association="DBModel.FK_IntegrationTransactions_IntegrationProcesses">
+            <End Role="IntegrationProcess" EntitySet="IntegrationProcesses" />
+            <End Role="IntegrationTransaction" EntitySet="IntegrationTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationTransactionDetails_IntegrationTransactions" Association="DBModel.FK_IntegrationTransactionDetails_IntegrationTransactions">
+            <End Role="IntegrationTransaction" EntitySet="IntegrationTransactions" />
+            <End Role="IntegrationTransactionDetail" EntitySet="IntegrationTransactionDetails" />
+          </AssociationSet>
+          <EntitySet Name="ApplicationDatabaseQueries" EntityType="DBModel.ApplicationDatabaseQuery" />
+          <EntitySet Name="ApplicationWebServiceRequests" EntityType="DBModel.ApplicationWebServiceRequest" />
+          <EntitySet Name="IntegrationAdapters" EntityType="DBModel.IntegrationAdapter" />
+          <AssociationSet Name="FK_IntegrationAdapters_ApplicationDatabaseQueries" Association="DBModel.FK_IntegrationAdapters_ApplicationDatabaseQueries">
+            <End Role="ApplicationDatabaseQuery" EntitySet="ApplicationDatabaseQueries" />
+            <End Role="IntegrationAdapter" EntitySet="IntegrationAdapters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationAdapters_ApplicationWebServiceRequests" Association="DBModel.FK_IntegrationAdapters_ApplicationWebServiceRequests">
+            <End Role="ApplicationWebServiceRequest" EntitySet="ApplicationWebServiceRequests" />
+            <End Role="IntegrationAdapter" EntitySet="IntegrationAdapters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationAdapterFields_IntegrationAdapters" Association="DBModel.FK_IntegrationAdapterFields_IntegrationAdapters">
+            <End Role="IntegrationAdapter" EntitySet="IntegrationAdapters" />
+            <End Role="IntegrationAdapterField" EntitySet="IntegrationAdapterFields" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationProcesses_IntegrationAdapters_Destination" Association="DBModel.FK_IntegrationProcesses_IntegrationAdapters_Destination">
+            <End Role="IntegrationAdapter" EntitySet="IntegrationAdapters" />
+            <End Role="IntegrationProcess" EntitySet="IntegrationProcesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IntegrationProcesses_IntegrationAdapters_Source" Association="DBModel.FK_IntegrationProcesses_IntegrationAdapters_Source">
+            <End Role="IntegrationAdapter" EntitySet="IntegrationAdapters" />
+            <End Role="IntegrationProcess" EntitySet="IntegrationProcesses" />
+          </AssociationSet>
+          <EntitySet Name="ApplicationDatabases" EntityType="DBModel.ApplicationDatabas" />
+          <EntitySet Name="Applications" EntityType="DBModel.Application" />
+          <AssociationSet Name="FK_ApplicationDatabaseQueries_ApplicationDatabases" Association="DBModel.FK_ApplicationDatabaseQueries_ApplicationDatabases">
+            <End Role="ApplicationDatabas" EntitySet="ApplicationDatabases" />
+            <End Role="ApplicationDatabaseQuery" EntitySet="ApplicationDatabaseQueries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ApplicationDatabases_Applications" Association="DBModel.FK_ApplicationDatabases_Applications">
+            <End Role="Application" EntitySet="Applications" />
+            <End Role="ApplicationDatabas" EntitySet="ApplicationDatabases" />
+          </AssociationSet>
+          <EntitySet Name="IntegrationAdapterCaches" EntityType="DBModel.IntegrationAdapterCach" />
+          <AssociationSet Name="FK_IntegrationAdapterCaches_IntegrationAdapters" Association="DBModel.FK_IntegrationAdapterCaches_IntegrationAdapters">
+            <End Role="IntegrationAdapter" EntitySet="IntegrationAdapters" />
+            <End Role="IntegrationAdapterCach" EntitySet="IntegrationAdapterCaches" />
+          </AssociationSet>
+          <EntitySet Name="SystemGroupObjects" EntityType="DBModel.SystemGroupObject" />
+          <EntitySet Name="SystemGroups" EntityType="DBModel.SystemGroup" />
+          <EntitySet Name="SystemObjects" EntityType="DBModel.SystemObject" />
+          <EntitySet Name="SystemUserGroups" EntityType="DBModel.SystemUserGroup" />
+          <EntitySet Name="SystemUsers" EntityType="DBModel.SystemUser" />
+          <AssociationSet Name="FK_SystemGroupObjects_SystemGroups" Association="DBModel.FK_SystemGroupObjects_SystemGroups">
+            <End Role="SystemGroup" EntitySet="SystemGroups" />
+            <End Role="SystemGroupObject" EntitySet="SystemGroupObjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemGroupObjects_SystemObjects" Association="DBModel.FK_SystemGroupObjects_SystemObjects">
+            <End Role="SystemObject" EntitySet="SystemObjects" />
+            <End Role="SystemGroupObject" EntitySet="SystemGroupObjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUserGroups_SystemGroups" Association="DBModel.FK_SystemUserGroups_SystemGroups">
+            <End Role="SystemGroup" EntitySet="SystemGroups" />
+            <End Role="SystemUserGroup" EntitySet="SystemUserGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUserGroups_SystemUsers" Association="DBModel.FK_SystemUserGroups_SystemUsers">
+            <End Role="SystemUser" EntitySet="SystemUsers" />
+            <End Role="SystemUserGroup" EntitySet="SystemUserGroups" />
+          </AssociationSet>
+          <EntitySet Name="ApplicationWebServices" EntityType="DBModel.ApplicationWebService" />
+          <AssociationSet Name="FK_ApplicationWebServices_Applications" Association="DBModel.FK_ApplicationWebServices_Applications">
+            <End Role="Application" EntitySet="Applications" />
+            <End Role="ApplicationWebService" EntitySet="ApplicationWebServices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ApplicationWebServiceRequests_ApplicationWebServices" Association="DBModel.FK_ApplicationWebServiceRequests_ApplicationWebServices">
+            <End Role="ApplicationWebService" EntitySet="ApplicationWebServices" />
+            <End Role="ApplicationWebServiceRequest" EntitySet="ApplicationWebServiceRequests" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="IntegrationAdapterField">
+          <Key>
+            <PropertyRef Name="IntegrationAdapterFieldID" />
+          </Key>
+          <Property Name="IntegrationAdapterFieldID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IntegrationAdapterID" Type="Int32" Nullable="false" />
+          <Property Name="FieldCategory" Type="Int32" Nullable="false" />
+          <Property Name="FieldName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FieldDataType" Type="Int32" Nullable="false" />
+          <Property Name="IsPrimaryKey" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecordLastUpdateBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordLastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PrimaryKeySequence" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="IntegrationProcessMappings" Relationship="DBModel.FK_IntegrationProcessMappings_IntegrationAdapterFields_Destination" FromRole="IntegrationAdapterField" ToRole="IntegrationProcessMapping" />
+          <NavigationProperty Name="IntegrationProcessMappings1" Relationship="DBModel.FK_IntegrationProcessMappings_IntegrationAdapterFields_Source" FromRole="IntegrationAdapterField" ToRole="IntegrationProcessMapping" />
+          <NavigationProperty Name="IntegrationAdapter" Relationship="DBModel.FK_IntegrationAdapterFields_IntegrationAdapters" FromRole="IntegrationAdapterField" ToRole="IntegrationAdapter" />
+        </EntityType>
+        <EntityType Name="IntegrationProcess">
+          <Key>
+            <PropertyRef Name="IntegrationProcessID" />
+          </Key>
+          <Property Name="IntegrationProcessID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IntegrationProcessCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IntegrationProcessTitle" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SourceIntegrationAdapterID" Type="Int32" />
+          <Property Name="DestinationIntegrationAdapterID" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecordLastUpdateBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordLastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="IntegrationProcessMappings" Relationship="DBModel.FK_IntegrationProcessMappings_IntegrationProcesses" FromRole="IntegrationProcess" ToRole="IntegrationProcessMapping" />
+          <NavigationProperty Name="IntegrationTransactions" Relationship="DBModel.FK_IntegrationTransactions_IntegrationProcesses" FromRole="IntegrationProcess" ToRole="IntegrationTransaction" />
+          <NavigationProperty Name="DestinationIntegrationAdapter" Relationship="DBModel.FK_IntegrationProcesses_IntegrationAdapters_Destination" FromRole="IntegrationProcess" ToRole="IntegrationAdapter" />
+          <NavigationProperty Name="SourceIntegrationAdapter" Relationship="DBModel.FK_IntegrationProcesses_IntegrationAdapters_Source" FromRole="IntegrationProcess" ToRole="IntegrationAdapter" />
+        </EntityType>
+        <EntityType Name="IntegrationProcessMapping">
+          <Key>
+            <PropertyRef Name="IntegrationProcessMappingID" />
+          </Key>
+          <Property Name="IntegrationProcessMappingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IntegrationProcessID" Type="Int32" Nullable="false" />
+          <Property Name="SourceIntegrationAdapterFieldID" Type="Int32" Nullable="false" />
+          <Property Name="DestinationIntegrationAdapterFieldID" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecordLastUpdateBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordLastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="DestinationIntegrationAdapterField" Relationship="DBModel.FK_IntegrationProcessMappings_IntegrationAdapterFields_Destination" FromRole="IntegrationProcessMapping" ToRole="IntegrationAdapterField" />
+          <NavigationProperty Name="SourceIntegrationAdapterField" Relationship="DBModel.FK_IntegrationProcessMappings_IntegrationAdapterFields_Source" FromRole="IntegrationProcessMapping" ToRole="IntegrationAdapterField" />
+          <NavigationProperty Name="IntegrationProcess" Relationship="DBModel.FK_IntegrationProcessMappings_IntegrationProcesses" FromRole="IntegrationProcessMapping" ToRole="IntegrationProcess" />
+        </EntityType>
+        <EntityType Name="IntegrationTransactionDetail">
+          <Key>
+            <PropertyRef Name="IntegrationTransactionDetailID" />
+          </Key>
+          <Property Name="IntegrationTransactionDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IntegrationTransactionID" Type="Int32" Nullable="false" />
+          <Property Name="IntegrationTransactionDetailStatus" Type="Byte" Nullable="false" />
+          <Property Name="IntegrationTransactionDetailData" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecordLastUpdateBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordLastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="IntegrationTransaction" Relationship="DBModel.FK_IntegrationTransactionDetails_IntegrationTransactions" FromRole="IntegrationTransactionDetail" ToRole="IntegrationTransaction" />
+        </EntityType>
+        <EntityType Name="IntegrationTransaction">
+          <Key>
+            <PropertyRef Name="IntegrationTransactionID" />
+          </Key>
+          <Property Name="IntegrationTransactionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IntegrationTransactionTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IntegrationTransactionDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IntegrationProcessID" Type="Int32" Nullable="false" />
+          <Property Name="TransactionStatus" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecordLastUpdateBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordLastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="IntegrationProcess" Relationship="DBModel.FK_IntegrationTransactions_IntegrationProcesses" FromRole="IntegrationTransaction" ToRole="IntegrationProcess" />
+          <NavigationProperty Name="IntegrationTransactionDetails" Relationship="DBModel.FK_IntegrationTransactionDetails_IntegrationTransactions" FromRole="IntegrationTransaction" ToRole="IntegrationTransactionDetail" />
+        </EntityType>
+        <Association Name="FK_IntegrationProcessMappings_IntegrationAdapterFields_Destination">
+          <End Type="DBModel.IntegrationAdapterField" Role="IntegrationAdapterField" Multiplicity="1" />
+          <End Type="DBModel.IntegrationProcessMapping" Role="IntegrationProcessMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationAdapterField">
+              <PropertyRef Name="IntegrationAdapterFieldID" />
+            </Principal>
+            <Dependent Role="IntegrationProcessMapping">
+              <PropertyRef Name="DestinationIntegrationAdapterFieldID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationProcessMappings_IntegrationAdapterFields_Source">
+          <End Type="DBModel.IntegrationAdapterField" Role="IntegrationAdapterField" Multiplicity="1" />
+          <End Type="DBModel.IntegrationProcessMapping" Role="IntegrationProcessMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationAdapterField">
+              <PropertyRef Name="IntegrationAdapterFieldID" />
+            </Principal>
+            <Dependent Role="IntegrationProcessMapping">
+              <PropertyRef Name="SourceIntegrationAdapterFieldID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationProcessMappings_IntegrationProcesses">
+          <End Type="DBModel.IntegrationProcess" Role="IntegrationProcess" Multiplicity="1" />
+          <End Type="DBModel.IntegrationProcessMapping" Role="IntegrationProcessMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationProcess">
+              <PropertyRef Name="IntegrationProcessID" />
+            </Principal>
+            <Dependent Role="IntegrationProcessMapping">
+              <PropertyRef Name="IntegrationProcessID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationTransactions_IntegrationProcesses">
+          <End Type="DBModel.IntegrationProcess" Role="IntegrationProcess" Multiplicity="1" />
+          <End Type="DBModel.IntegrationTransaction" Role="IntegrationTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationProcess">
+              <PropertyRef Name="IntegrationProcessID" />
+            </Principal>
+            <Dependent Role="IntegrationTransaction">
+              <PropertyRef Name="IntegrationProcessID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationTransactionDetails_IntegrationTransactions">
+          <End Type="DBModel.IntegrationTransaction" Role="IntegrationTransaction" Multiplicity="1" />
+          <End Type="DBModel.IntegrationTransactionDetail" Role="IntegrationTransactionDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationTransaction">
+              <PropertyRef Name="IntegrationTransactionID" />
+            </Principal>
+            <Dependent Role="IntegrationTransactionDetail">
+              <PropertyRef Name="IntegrationTransactionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ApplicationDatabaseQuery">
+          <Key>
+            <PropertyRef Name="ApplicationDatabaseQueryID" />
+          </Key>
+          <Property Name="ApplicationDatabaseQueryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicationDatabaseID" Type="Int32" Nullable="false" />
+          <Property Name="ApplicationDatabaseQueryTitle" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationDatabaseQueryType" Type="Byte" Nullable="false" />
+          <Property Name="ApplicationDatabaseQueryCommand" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsAsync" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecordLastUpdateBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordLastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="IntegrationAdapters" Relationship="DBModel.FK_IntegrationAdapters_ApplicationDatabaseQueries" FromRole="ApplicationDatabaseQuery" ToRole="IntegrationAdapter" />
+          <NavigationProperty Name="ApplicationDatabas" Relationship="DBModel.FK_ApplicationDatabaseQueries_ApplicationDatabases" FromRole="ApplicationDatabaseQuery" ToRole="ApplicationDatabas" />
+        </EntityType>
+        <EntityType Name="ApplicationWebServiceRequest">
+          <Key>
+            <PropertyRef Name="ApplicationWebServiceRequestID" />
+          </Key>
+          <Property Name="ApplicationWebServiceRequestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicationWebServiceID" Type="Int32" Nullable="false" />
+          <Property Name="ApplicationWebServiceRequestTitle" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationWebServiceRequestType" Type="Byte" Nullable="false" />
+          <Property Name="ImplementationTypeFullName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecordLastUpdateBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordLastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="IntegrationAdapters" Relationship="DBModel.FK_IntegrationAdapters_ApplicationWebServiceRequests" FromRole="ApplicationWebServiceRequest" ToRole="IntegrationAdapter" />
+          <NavigationProperty Name="ApplicationWebService" Relationship="DBModel.FK_ApplicationWebServiceRequests_ApplicationWebServices" FromRole="ApplicationWebServiceRequest" ToRole="ApplicationWebService" />
+        </EntityType>
+        <EntityType Name="IntegrationAdapter">
+          <Key>
+            <PropertyRef Name="IntegrationAdapterID" />
+          </Key>
+          <Property Name="IntegrationAdapterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IntegrationAdapterTitle" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IntegrationAdapterType" Type="Int32" Nullable="false" />
+          <Property Name="EndPointType" Type="Byte" />
+          <Property Name="ApplicationDatabaseQueryID" Type="Int32" />
+          <Property Name="ApplicationWebServiceRequestID" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecordLastUpdateBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordLastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ApplicationDatabaseQuery" Relationship="DBModel.FK_IntegrationAdapters_ApplicationDatabaseQueries" FromRole="IntegrationAdapter" ToRole="ApplicationDatabaseQuery" />
+          <NavigationProperty Name="ApplicationWebServiceRequest" Relationship="DBModel.FK_IntegrationAdapters_ApplicationWebServiceRequests" FromRole="IntegrationAdapter" ToRole="ApplicationWebServiceRequest" />
+          <NavigationProperty Name="IntegrationAdapterFields" Relationship="DBModel.FK_IntegrationAdapterFields_IntegrationAdapters" FromRole="IntegrationAdapter" ToRole="IntegrationAdapterField" />
+          <NavigationProperty Name="IntegrationProcesses" Relationship="DBModel.FK_IntegrationProcesses_IntegrationAdapters_Destination" FromRole="IntegrationAdapter" ToRole="IntegrationProcess" />
+          <NavigationProperty Name="IntegrationProcesses1" Relationship="DBModel.FK_IntegrationProcesses_IntegrationAdapters_Source" FromRole="IntegrationAdapter" ToRole="IntegrationProcess" />
+          <NavigationProperty Name="IntegrationAdapterCaches" Relationship="DBModel.FK_IntegrationAdapterCaches_IntegrationAdapters" FromRole="IntegrationAdapter" ToRole="IntegrationAdapterCach" />
+        </EntityType>
+        <Association Name="FK_IntegrationAdapters_ApplicationDatabaseQueries">
+          <End Type="DBModel.ApplicationDatabaseQuery" Role="ApplicationDatabaseQuery" Multiplicity="0..1" />
+          <End Type="DBModel.IntegrationAdapter" Role="IntegrationAdapter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationDatabaseQuery">
+              <PropertyRef Name="ApplicationDatabaseQueryID" />
+            </Principal>
+            <Dependent Role="IntegrationAdapter">
+              <PropertyRef Name="ApplicationDatabaseQueryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationAdapters_ApplicationWebServiceRequests">
+          <End Type="DBModel.ApplicationWebServiceRequest" Role="ApplicationWebServiceRequest" Multiplicity="0..1" />
+          <End Type="DBModel.IntegrationAdapter" Role="IntegrationAdapter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationWebServiceRequest">
+              <PropertyRef Name="ApplicationWebServiceRequestID" />
+            </Principal>
+            <Dependent Role="IntegrationAdapter">
+              <PropertyRef Name="ApplicationWebServiceRequestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationAdapterFields_IntegrationAdapters">
+          <End Type="DBModel.IntegrationAdapter" Role="IntegrationAdapter" Multiplicity="1" />
+          <End Type="DBModel.IntegrationAdapterField" Role="IntegrationAdapterField" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationAdapter">
+              <PropertyRef Name="IntegrationAdapterID" />
+            </Principal>
+            <Dependent Role="IntegrationAdapterField">
+              <PropertyRef Name="IntegrationAdapterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationProcesses_IntegrationAdapters_Destination">
+          <End Type="DBModel.IntegrationAdapter" Role="IntegrationAdapter" Multiplicity="0..1" />
+          <End Type="DBModel.IntegrationProcess" Role="IntegrationProcess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationAdapter">
+              <PropertyRef Name="IntegrationAdapterID" />
+            </Principal>
+            <Dependent Role="IntegrationProcess">
+              <PropertyRef Name="DestinationIntegrationAdapterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IntegrationProcesses_IntegrationAdapters_Source">
+          <End Type="DBModel.IntegrationAdapter" Role="IntegrationAdapter" Multiplicity="0..1" />
+          <End Type="DBModel.IntegrationProcess" Role="IntegrationProcess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationAdapter">
+              <PropertyRef Name="IntegrationAdapterID" />
+            </Principal>
+            <Dependent Role="IntegrationProcess">
+              <PropertyRef Name="SourceIntegrationAdapterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ApplicationDatabas">
+          <Key>
+            <PropertyRef Name="ApplicationDatabaseID" />
+          </Key>
+          <Property Name="ApplicationDatabaseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicationID" Type="Int32" Nullable="false" />
+          <Property Name="ApplicationDatabaseTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationDatabaseType" Type="Int32" Nullable="false" />
+          <Property Name="Metadata" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderConnectionString" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecordLastUpdateBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordLastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ApplicationDatabaseQueries" Relationship="DBModel.FK_ApplicationDatabaseQueries_ApplicationDatabases" FromRole="ApplicationDatabas" ToRole="ApplicationDatabaseQuery" />
+          <NavigationProperty Name="Application" Relationship="DBModel.FK_ApplicationDatabases_Applications" FromRole="ApplicationDatabas" ToRole="Application" />
+        </EntityType>
+        <EntityType Name="Application">
+          <Key>
+            <PropertyRef Name="ApplicationID" />
+          </Key>
+          <Property Name="ApplicationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicationSymbol" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationTitle" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationVersion" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationProvider" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationBuisnessArea" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecordLastUpdateBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordLastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ApplicationDatabases" Relationship="DBModel.FK_ApplicationDatabases_Applications" FromRole="Application" ToRole="ApplicationDatabas" />
+          <NavigationProperty Name="ApplicationWebServices" Relationship="DBModel.FK_ApplicationWebServices_Applications" FromRole="Application" ToRole="ApplicationWebService" />
+        </EntityType>
+        <Association Name="FK_ApplicationDatabaseQueries_ApplicationDatabases">
+          <End Type="DBModel.ApplicationDatabas" Role="ApplicationDatabas" Multiplicity="1" />
+          <End Type="DBModel.ApplicationDatabaseQuery" Role="ApplicationDatabaseQuery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationDatabas">
+              <PropertyRef Name="ApplicationDatabaseID" />
+            </Principal>
+            <Dependent Role="ApplicationDatabaseQuery">
+              <PropertyRef Name="ApplicationDatabaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ApplicationDatabases_Applications">
+          <End Type="DBModel.Application" Role="Application" Multiplicity="1" />
+          <End Type="DBModel.ApplicationDatabas" Role="ApplicationDatabas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Application">
+              <PropertyRef Name="ApplicationID" />
+            </Principal>
+            <Dependent Role="ApplicationDatabas">
+              <PropertyRef Name="ApplicationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="IntegrationAdapterCach">
+          <Key>
+            <PropertyRef Name="IntegrationAdapterCacheID" />
+          </Key>
+          <Property Name="IntegrationAdapterCacheID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IntegrationAdapterID" Type="Int32" Nullable="false" />
+          <Property Name="CachePrimaryKeys" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CacheStatus" Type="Byte" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecordLastUpdateBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordLastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="IntegrationAdapter" Relationship="DBModel.FK_IntegrationAdapterCaches_IntegrationAdapters" FromRole="IntegrationAdapterCach" ToRole="IntegrationAdapter" />
+        </EntityType>
+        <Association Name="FK_IntegrationAdapterCaches_IntegrationAdapters">
+          <End Type="DBModel.IntegrationAdapter" Role="IntegrationAdapter" Multiplicity="1" />
+          <End Type="DBModel.IntegrationAdapterCach" Role="IntegrationAdapterCach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IntegrationAdapter">
+              <PropertyRef Name="IntegrationAdapterID" />
+            </Principal>
+            <Dependent Role="IntegrationAdapterCach">
+              <PropertyRef Name="IntegrationAdapterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SystemGroupObject">
+          <Key>
+            <PropertyRef Name="SystemGroupObjectID" />
+          </Key>
+          <Property Name="SystemGroupObjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SystemGroupID" Type="Int32" Nullable="false" />
+          <Property Name="SystemObjectID" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreationUserID" Type="Int32" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="SystemGroup" Relationship="DBModel.FK_SystemGroupObjects_SystemGroups" FromRole="SystemGroupObject" ToRole="SystemGroup" />
+          <NavigationProperty Name="SystemObject" Relationship="DBModel.FK_SystemGroupObjects_SystemObjects" FromRole="SystemGroupObject" ToRole="SystemObject" />
+        </EntityType>
+        <EntityType Name="SystemGroup">
+          <Key>
+            <PropertyRef Name="SystemGroupID" />
+          </Key>
+          <Property Name="SystemGroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SystemGroupName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreationUserID" Type="Int32" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="SystemGroupObjects" Relationship="DBModel.FK_SystemGroupObjects_SystemGroups" FromRole="SystemGroup" ToRole="SystemGroupObject" />
+          <NavigationProperty Name="SystemUserGroups" Relationship="DBModel.FK_SystemUserGroups_SystemGroups" FromRole="SystemGroup" ToRole="SystemUserGroup" />
+        </EntityType>
+        <EntityType Name="SystemObject">
+          <Key>
+            <PropertyRef Name="SystemObjectID" />
+          </Key>
+          <Property Name="SystemObjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SystemObjectType" Type="Byte" Nullable="false" />
+          <Property Name="SystemObjectIdentifier" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreationUserID" Type="Int32" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="SystemGroupObjects" Relationship="DBModel.FK_SystemGroupObjects_SystemObjects" FromRole="SystemObject" ToRole="SystemGroupObject" />
+        </EntityType>
+        <EntityType Name="SystemUserGroup">
+          <Key>
+            <PropertyRef Name="SystemUserGroupID" />
+          </Key>
+          <Property Name="SystemUserGroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SystemUserID" Type="Int32" Nullable="false" />
+          <Property Name="SystemGroupID" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreationUserID" Type="Int32" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="SystemGroup" Relationship="DBModel.FK_SystemUserGroups_SystemGroups" FromRole="SystemUserGroup" ToRole="SystemGroup" />
+          <NavigationProperty Name="SystemUser" Relationship="DBModel.FK_SystemUserGroups_SystemUsers" FromRole="SystemUserGroup" ToRole="SystemUser" />
+        </EntityType>
+        <EntityType Name="SystemUser">
+          <Key>
+            <PropertyRef Name="SystemUserID" />
+          </Key>
+          <Property Name="SystemUserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SystemUserNetworkID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SystemUserFullName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreationUserID" Type="Int32" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="SystemUserGroups" Relationship="DBModel.FK_SystemUserGroups_SystemUsers" FromRole="SystemUser" ToRole="SystemUserGroup" />
+        </EntityType>
+        <Association Name="FK_SystemGroupObjects_SystemGroups">
+          <End Type="DBModel.SystemGroup" Role="SystemGroup" Multiplicity="1" />
+          <End Type="DBModel.SystemGroupObject" Role="SystemGroupObject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemGroup">
+              <PropertyRef Name="SystemGroupID" />
+            </Principal>
+            <Dependent Role="SystemGroupObject">
+              <PropertyRef Name="SystemGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemGroupObjects_SystemObjects">
+          <End Type="DBModel.SystemObject" Role="SystemObject" Multiplicity="1" />
+          <End Type="DBModel.SystemGroupObject" Role="SystemGroupObject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemObject">
+              <PropertyRef Name="SystemObjectID" />
+            </Principal>
+            <Dependent Role="SystemGroupObject">
+              <PropertyRef Name="SystemObjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUserGroups_SystemGroups">
+          <End Type="DBModel.SystemGroup" Role="SystemGroup" Multiplicity="1" />
+          <End Type="DBModel.SystemUserGroup" Role="SystemUserGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemGroup">
+              <PropertyRef Name="SystemGroupID" />
+            </Principal>
+            <Dependent Role="SystemUserGroup">
+              <PropertyRef Name="SystemGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUserGroups_SystemUsers">
+          <End Type="DBModel.SystemUser" Role="SystemUser" Multiplicity="1" />
+          <End Type="DBModel.SystemUserGroup" Role="SystemUserGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserID" />
+            </Principal>
+            <Dependent Role="SystemUserGroup">
+              <PropertyRef Name="SystemUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ApplicationWebService">
+          <Key>
+            <PropertyRef Name="ApplicationWebServiceID" />
+          </Key>
+          <Property Name="ApplicationWebServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicationID" Type="Int32" Nullable="false" />
+          <Property Name="ApplicationWebServiceTitle" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationWebServiceURL" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="AssemblyFullPath" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecordCreatedBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecordLastUpdateBy" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecordLastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Application" Relationship="DBModel.FK_ApplicationWebServices_Applications" FromRole="ApplicationWebService" ToRole="Application" />
+          <NavigationProperty Name="ApplicationWebServiceRequests" Relationship="DBModel.FK_ApplicationWebServiceRequests_ApplicationWebServices" FromRole="ApplicationWebService" ToRole="ApplicationWebServiceRequest" />
+        </EntityType>
+        <Association Name="FK_ApplicationWebServices_Applications">
+          <End Type="DBModel.Application" Role="Application" Multiplicity="1" />
+          <End Type="DBModel.ApplicationWebService" Role="ApplicationWebService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Application">
+              <PropertyRef Name="ApplicationID" />
+            </Principal>
+            <Dependent Role="ApplicationWebService">
+              <PropertyRef Name="ApplicationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ApplicationWebServiceRequests_ApplicationWebServices">
+          <End Type="DBModel.ApplicationWebService" Role="ApplicationWebService" Multiplicity="1" />
+          <End Type="DBModel.ApplicationWebServiceRequest" Role="ApplicationWebServiceRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationWebService">
+              <PropertyRef Name="ApplicationWebServiceID" />
+            </Principal>
+            <Dependent Role="ApplicationWebServiceRequest">
+              <PropertyRef Name="ApplicationWebServiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="DBEntities">
+          <EntitySetMapping Name="IntegrationAdapterFields">
+            <EntityTypeMapping TypeName="DBModel.IntegrationAdapterField">
+              <MappingFragment StoreEntitySet="IntegrationAdapterFields">
+                <ScalarProperty Name="PrimaryKeySequence" ColumnName="PrimaryKeySequence" />
+                <ScalarProperty Name="RecordLastUpdate" ColumnName="RecordLastUpdate" />
+                <ScalarProperty Name="RecordLastUpdateBy" ColumnName="RecordLastUpdateBy" />
+                <ScalarProperty Name="RecordCreated" ColumnName="RecordCreated" />
+                <ScalarProperty Name="RecordCreatedBy" ColumnName="RecordCreatedBy" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsPrimaryKey" ColumnName="IsPrimaryKey" />
+                <ScalarProperty Name="FieldDataType" ColumnName="FieldDataType" />
+                <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+                <ScalarProperty Name="FieldCategory" ColumnName="FieldCategory" />
+                <ScalarProperty Name="IntegrationAdapterID" ColumnName="IntegrationAdapterID" />
+                <ScalarProperty Name="IntegrationAdapterFieldID" ColumnName="IntegrationAdapterFieldID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IntegrationProcesses">
+            <EntityTypeMapping TypeName="DBModel.IntegrationProcess">
+              <MappingFragment StoreEntitySet="IntegrationProcesses">
+                <ScalarProperty Name="RecordLastUpdate" ColumnName="RecordLastUpdate" />
+                <ScalarProperty Name="RecordLastUpdateBy" ColumnName="RecordLastUpdateBy" />
+                <ScalarProperty Name="RecordCreated" ColumnName="RecordCreated" />
+                <ScalarProperty Name="RecordCreatedBy" ColumnName="RecordCreatedBy" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DestinationIntegrationAdapterID" ColumnName="DestinationIntegrationAdapterID" />
+                <ScalarProperty Name="SourceIntegrationAdapterID" ColumnName="SourceIntegrationAdapterID" />
+                <ScalarProperty Name="IntegrationProcessTitle" ColumnName="IntegrationProcessTitle" />
+                <ScalarProperty Name="IntegrationProcessCode" ColumnName="IntegrationProcessCode" />
+                <ScalarProperty Name="IntegrationProcessID" ColumnName="IntegrationProcessID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IntegrationProcessMappings">
+            <EntityTypeMapping TypeName="DBModel.IntegrationProcessMapping">
+              <MappingFragment StoreEntitySet="IntegrationProcessMappings">
+                <ScalarProperty Name="RecordLastUpdate" ColumnName="RecordLastUpdate" />
+                <ScalarProperty Name="RecordLastUpdateBy" ColumnName="RecordLastUpdateBy" />
+                <ScalarProperty Name="RecordCreated" ColumnName="RecordCreated" />
+                <ScalarProperty Name="RecordCreatedBy" ColumnName="RecordCreatedBy" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DestinationIntegrationAdapterFieldID" ColumnName="DestinationIntegrationAdapterFieldID" />
+                <ScalarProperty Name="SourceIntegrationAdapterFieldID" ColumnName="SourceIntegrationAdapterFieldID" />
+                <ScalarProperty Name="IntegrationProcessID" ColumnName="IntegrationProcessID" />
+                <ScalarProperty Name="IntegrationProcessMappingID" ColumnName="IntegrationProcessMappingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IntegrationTransactionDetails">
+            <EntityTypeMapping TypeName="DBModel.IntegrationTransactionDetail">
+              <MappingFragment StoreEntitySet="IntegrationTransactionDetails">
+                <ScalarProperty Name="RecordLastUpdate" ColumnName="RecordLastUpdate" />
+                <ScalarProperty Name="RecordLastUpdateBy" ColumnName="RecordLastUpdateBy" />
+                <ScalarProperty Name="RecordCreated" ColumnName="RecordCreated" />
+                <ScalarProperty Name="RecordCreatedBy" ColumnName="RecordCreatedBy" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IntegrationTransactionDetailData" ColumnName="IntegrationTransactionDetailData" />
+                <ScalarProperty Name="IntegrationTransactionDetailStatus" ColumnName="IntegrationTransactionDetailStatus" />
+                <ScalarProperty Name="IntegrationTransactionID" ColumnName="IntegrationTransactionID" />
+                <ScalarProperty Name="IntegrationTransactionDetailID" ColumnName="IntegrationTransactionDetailID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IntegrationTransactions">
+            <EntityTypeMapping TypeName="DBModel.IntegrationTransaction">
+              <MappingFragment StoreEntitySet="IntegrationTransactions">
+                <ScalarProperty Name="RecordLastUpdate" ColumnName="RecordLastUpdate" />
+                <ScalarProperty Name="RecordLastUpdateBy" ColumnName="RecordLastUpdateBy" />
+                <ScalarProperty Name="RecordCreated" ColumnName="RecordCreated" />
+                <ScalarProperty Name="RecordCreatedBy" ColumnName="RecordCreatedBy" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="TransactionStatus" ColumnName="TransactionStatus" />
+                <ScalarProperty Name="IntegrationProcessID" ColumnName="IntegrationProcessID" />
+                <ScalarProperty Name="IntegrationTransactionDate" ColumnName="IntegrationTransactionDate" />
+                <ScalarProperty Name="IntegrationTransactionTitle" ColumnName="IntegrationTransactionTitle" />
+                <ScalarProperty Name="IntegrationTransactionID" ColumnName="IntegrationTransactionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationDatabaseQueries">
+            <EntityTypeMapping TypeName="DBModel.ApplicationDatabaseQuery">
+              <MappingFragment StoreEntitySet="ApplicationDatabaseQueries">
+                <ScalarProperty Name="RecordLastUpdate" ColumnName="RecordLastUpdate" />
+                <ScalarProperty Name="RecordLastUpdateBy" ColumnName="RecordLastUpdateBy" />
+                <ScalarProperty Name="RecordCreated" ColumnName="RecordCreated" />
+                <ScalarProperty Name="RecordCreatedBy" ColumnName="RecordCreatedBy" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsAsync" ColumnName="IsAsync" />
+                <ScalarProperty Name="ApplicationDatabaseQueryCommand" ColumnName="ApplicationDatabaseQueryCommand" />
+                <ScalarProperty Name="ApplicationDatabaseQueryType" ColumnName="ApplicationDatabaseQueryType" />
+                <ScalarProperty Name="ApplicationDatabaseQueryTitle" ColumnName="ApplicationDatabaseQueryTitle" />
+                <ScalarProperty Name="ApplicationDatabaseID" ColumnName="ApplicationDatabaseID" />
+                <ScalarProperty Name="ApplicationDatabaseQueryID" ColumnName="ApplicationDatabaseQueryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationWebServiceRequests">
+            <EntityTypeMapping TypeName="DBModel.ApplicationWebServiceRequest">
+              <MappingFragment StoreEntitySet="ApplicationWebServiceRequests">
+                <ScalarProperty Name="RecordLastUpdate" ColumnName="RecordLastUpdate" />
+                <ScalarProperty Name="RecordLastUpdateBy" ColumnName="RecordLastUpdateBy" />
+                <ScalarProperty Name="RecordCreated" ColumnName="RecordCreated" />
+                <ScalarProperty Name="RecordCreatedBy" ColumnName="RecordCreatedBy" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ImplementationTypeFullName" ColumnName="ImplementationTypeFullName" />
+                <ScalarProperty Name="ApplicationWebServiceRequestType" ColumnName="ApplicationWebServiceRequestType" />
+                <ScalarProperty Name="ApplicationWebServiceRequestTitle" ColumnName="ApplicationWebServiceRequestTitle" />
+                <ScalarProperty Name="ApplicationWebServiceID" ColumnName="ApplicationWebServiceID" />
+                <ScalarProperty Name="ApplicationWebServiceRequestID" ColumnName="ApplicationWebServiceRequestID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IntegrationAdapters">
+            <EntityTypeMapping TypeName="DBModel.IntegrationAdapter">
+              <MappingFragment StoreEntitySet="IntegrationAdapters">
+                <ScalarProperty Name="RecordLastUpdate" ColumnName="RecordLastUpdate" />
+                <ScalarProperty Name="RecordLastUpdateBy" ColumnName="RecordLastUpdateBy" />
+                <ScalarProperty Name="RecordCreated" ColumnName="RecordCreated" />
+                <ScalarProperty Name="RecordCreatedBy" ColumnName="RecordCreatedBy" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ApplicationWebServiceRequestID" ColumnName="ApplicationWebServiceRequestID" />
+                <ScalarProperty Name="ApplicationDatabaseQueryID" ColumnName="ApplicationDatabaseQueryID" />
+                <ScalarProperty Name="EndPointType" ColumnName="EndPointType" />
+                <ScalarProperty Name="IntegrationAdapterType" ColumnName="IntegrationAdapterType" />
+                <ScalarProperty Name="IntegrationAdapterTitle" ColumnName="IntegrationAdapterTitle" />
+                <ScalarProperty Name="IntegrationAdapterID" ColumnName="IntegrationAdapterID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationDatabases">
+            <EntityTypeMapping TypeName="DBModel.ApplicationDatabas">
+              <MappingFragment StoreEntitySet="ApplicationDatabases">
+                <ScalarProperty Name="RecordLastUpdate" ColumnName="RecordLastUpdate" />
+                <ScalarProperty Name="RecordLastUpdateBy" ColumnName="RecordLastUpdateBy" />
+                <ScalarProperty Name="RecordCreated" ColumnName="RecordCreated" />
+                <ScalarProperty Name="RecordCreatedBy" ColumnName="RecordCreatedBy" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ProviderConnectionString" ColumnName="ProviderConnectionString" />
+                <ScalarProperty Name="ProviderName" ColumnName="ProviderName" />
+                <ScalarProperty Name="Metadata" ColumnName="Metadata" />
+                <ScalarProperty Name="ApplicationDatabaseType" ColumnName="ApplicationDatabaseType" />
+                <ScalarProperty Name="ApplicationDatabaseTitle" ColumnName="ApplicationDatabaseTitle" />
+                <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+                <ScalarProperty Name="ApplicationDatabaseID" ColumnName="ApplicationDatabaseID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Applications">
+            <EntityTypeMapping TypeName="DBModel.Application">
+              <MappingFragment StoreEntitySet="Applications">
+                <ScalarProperty Name="RecordLastUpdate" ColumnName="RecordLastUpdate" />
+                <ScalarProperty Name="RecordLastUpdateBy" ColumnName="RecordLastUpdateBy" />
+                <ScalarProperty Name="RecordCreated" ColumnName="RecordCreated" />
+                <ScalarProperty Name="RecordCreatedBy" ColumnName="RecordCreatedBy" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ApplicationBuisnessArea" ColumnName="ApplicationBuisnessArea" />
+                <ScalarProperty Name="ApplicationProvider" ColumnName="ApplicationProvider" />
+                <ScalarProperty Name="ApplicationVersion" ColumnName="ApplicationVersion" />
+                <ScalarProperty Name="ApplicationTitle" ColumnName="ApplicationTitle" />
+                <ScalarProperty Name="ApplicationSymbol" ColumnName="ApplicationSymbol" />
+                <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IntegrationAdapterCaches">
+            <EntityTypeMapping TypeName="DBModel.IntegrationAdapterCach">
+              <MappingFragment StoreEntitySet="IntegrationAdapterCaches">
+                <ScalarProperty Name="RecordLastUpdate" ColumnName="RecordLastUpdate" />
+                <ScalarProperty Name="RecordLastUpdateBy" ColumnName="RecordLastUpdateBy" />
+                <ScalarProperty Name="RecordCreated" ColumnName="RecordCreated" />
+                <ScalarProperty Name="RecordCreatedBy" ColumnName="RecordCreatedBy" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CacheStatus" ColumnName="CacheStatus" />
+                <ScalarProperty Name="CachePrimaryKeys" ColumnName="CachePrimaryKeys" />
+                <ScalarProperty Name="IntegrationAdapterID" ColumnName="IntegrationAdapterID" />
+                <ScalarProperty Name="IntegrationAdapterCacheID" ColumnName="IntegrationAdapterCacheID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemGroupObjects">
+            <EntityTypeMapping TypeName="DBModel.SystemGroupObject">
+              <MappingFragment StoreEntitySet="SystemGroupObjects">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationUserID" ColumnName="CreationUserID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="SystemObjectID" ColumnName="SystemObjectID" />
+                <ScalarProperty Name="SystemGroupID" ColumnName="SystemGroupID" />
+                <ScalarProperty Name="SystemGroupObjectID" ColumnName="SystemGroupObjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemGroups">
+            <EntityTypeMapping TypeName="DBModel.SystemGroup">
+              <MappingFragment StoreEntitySet="SystemGroups">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationUserID" ColumnName="CreationUserID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="SystemGroupName" ColumnName="SystemGroupName" />
+                <ScalarProperty Name="SystemGroupID" ColumnName="SystemGroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemObjects">
+            <EntityTypeMapping TypeName="DBModel.SystemObject">
+              <MappingFragment StoreEntitySet="SystemObjects">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationUserID" ColumnName="CreationUserID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="SystemObjectIdentifier" ColumnName="SystemObjectIdentifier" />
+                <ScalarProperty Name="SystemObjectType" ColumnName="SystemObjectType" />
+                <ScalarProperty Name="SystemObjectID" ColumnName="SystemObjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemUserGroups">
+            <EntityTypeMapping TypeName="DBModel.SystemUserGroup">
+              <MappingFragment StoreEntitySet="SystemUserGroups">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationUserID" ColumnName="CreationUserID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="SystemGroupID" ColumnName="SystemGroupID" />
+                <ScalarProperty Name="SystemUserID" ColumnName="SystemUserID" />
+                <ScalarProperty Name="SystemUserGroupID" ColumnName="SystemUserGroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemUsers">
+            <EntityTypeMapping TypeName="DBModel.SystemUser">
+              <MappingFragment StoreEntitySet="SystemUsers">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationUserID" ColumnName="CreationUserID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="SystemUserFullName" ColumnName="SystemUserFullName" />
+                <ScalarProperty Name="SystemUserNetworkID" ColumnName="SystemUserNetworkID" />
+                <ScalarProperty Name="SystemUserID" ColumnName="SystemUserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationWebServices">
+            <EntityTypeMapping TypeName="DBModel.ApplicationWebService">
+              <MappingFragment StoreEntitySet="ApplicationWebServices">
+                <ScalarProperty Name="RecordLastUpdate" ColumnName="RecordLastUpdate" />
+                <ScalarProperty Name="RecordLastUpdateBy" ColumnName="RecordLastUpdateBy" />
+                <ScalarProperty Name="RecordCreated" ColumnName="RecordCreated" />
+                <ScalarProperty Name="RecordCreatedBy" ColumnName="RecordCreatedBy" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AssemblyFullPath" ColumnName="AssemblyFullPath" />
+                <ScalarProperty Name="ApplicationWebServiceURL" ColumnName="ApplicationWebServiceURL" />
+                <ScalarProperty Name="ApplicationWebServiceTitle" ColumnName="ApplicationWebServiceTitle" />
+                <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+                <ScalarProperty Name="ApplicationWebServiceID" ColumnName="ApplicationWebServiceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="DBModel" ZoomLevel="124">
+        <EntityTypeShape EntityType="DBModel.IntegrationAdapterField" Width="1.5" PointX="9.75" PointY="12.25" />
+        <EntityTypeShape EntityType="DBModel.IntegrationProcess" Width="2.125" PointX="9.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DBModel.IntegrationProcessMapping" Width="3" PointX="12.625" PointY="8.375" />
+        <EntityTypeShape EntityType="DBModel.IntegrationTransactionDetail" Width="1.5" PointX="14.875" PointY="4.125" />
+        <EntityTypeShape EntityType="DBModel.IntegrationTransaction" Width="1.5" PointX="12.625" PointY="4" />
+        <AssociationConnector Association="DBModel.FK_IntegrationProcessMappings_IntegrationAdapterFields_Destination" />
+        <AssociationConnector Association="DBModel.FK_IntegrationProcessMappings_IntegrationAdapterFields_Source" />
+        <AssociationConnector Association="DBModel.FK_IntegrationProcessMappings_IntegrationProcesses" />
+        <AssociationConnector Association="DBModel.FK_IntegrationTransactions_IntegrationProcesses" />
+        <AssociationConnector Association="DBModel.FK_IntegrationTransactionDetails_IntegrationTransactions" />
+        <EntityTypeShape EntityType="DBModel.ApplicationDatabaseQuery" Width="1.5" PointX="5.25" PointY="13.5" />
+        <EntityTypeShape EntityType="DBModel.ApplicationWebServiceRequest" Width="1.5" PointX="4.875" PointY="3.25" />
+        <EntityTypeShape EntityType="DBModel.IntegrationAdapter" Width="1.5" PointX="7.5" PointY="8" />
+        <AssociationConnector Association="DBModel.FK_IntegrationAdapters_ApplicationDatabaseQueries" />
+        <AssociationConnector Association="DBModel.FK_IntegrationAdapters_ApplicationWebServiceRequests" />
+        <AssociationConnector Association="DBModel.FK_IntegrationAdapterFields_IntegrationAdapters" />
+        <AssociationConnector Association="DBModel.FK_IntegrationProcesses_IntegrationAdapters_Destination" />
+        <AssociationConnector Association="DBModel.FK_IntegrationProcesses_IntegrationAdapters_Source" />
+        <EntityTypeShape EntityType="DBModel.ApplicationDatabas" Width="1.5" PointX="3.375" PointY="13.375" />
+        <EntityTypeShape EntityType="DBModel.Application" Width="1.5" PointX="0.75" PointY="8.5" />
+        <AssociationConnector Association="DBModel.FK_ApplicationDatabaseQueries_ApplicationDatabases" />
+        <AssociationConnector Association="DBModel.FK_ApplicationDatabases_Applications" />
+        <EntityTypeShape EntityType="DBModel.IntegrationAdapterCach" Width="1.5" PointX="9.75" PointY="17.625" />
+        <AssociationConnector Association="DBModel.FK_IntegrationAdapterCaches_IntegrationAdapters" />
+        <EntityTypeShape EntityType="DBModel.SystemGroupObject" Width="1.5" PointX="14.625" PointY="15.125" />
+        <EntityTypeShape EntityType="DBModel.SystemGroup" Width="1.5" PointX="12.375" PointY="15.25" />
+        <EntityTypeShape EntityType="DBModel.SystemObject" Width="1.5" PointX="12.375" PointY="19.25" />
+        <EntityTypeShape EntityType="DBModel.SystemUserGroup" Width="1.5" PointX="17.625" PointY="15.125" />
+        <EntityTypeShape EntityType="DBModel.SystemUser" Width="1.5" PointX="15.375" PointY="19.25" />
+        <AssociationConnector Association="DBModel.FK_SystemGroupObjects_SystemGroups" />
+        <AssociationConnector Association="DBModel.FK_SystemGroupObjects_SystemObjects" />
+        <AssociationConnector Association="DBModel.FK_SystemUserGroups_SystemGroups" />
+        <AssociationConnector Association="DBModel.FK_SystemUserGroups_SystemUsers" />
+        <EntityTypeShape EntityType="DBModel.ApplicationWebService" Width="1.5" PointX="3" PointY="8.625" />
+        <AssociationConnector Association="DBModel.FK_ApplicationWebServices_Applications" />
+        <AssociationConnector Association="DBModel.FK_ApplicationWebServiceRequests_ApplicationWebServices" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

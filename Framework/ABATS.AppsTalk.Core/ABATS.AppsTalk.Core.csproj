@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF444266-0646-416C-98E7-2E11B20C48A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ABATS.AppsTalk.Core</RootNamespace>
+    <AssemblyName>ABATS.AppsTalk.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bases\DBEntityBase.cs" />
+    <Compile Include="DTOs\DbRecordInfo.cs" />
+    <Compile Include="Bases\DisposableBase.cs" />
+    <Compile Include="Bases\DTOBase.cs" />
+    <Compile Include="Bases\SingletonBase.cs" />
+    <Compile Include="Common\Attributes.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\Enums.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="DTOs\CommonSettingsInfo.cs" />
+    <Compile Include="DTOs\ParameterInfo.cs" />
+    <Compile Include="DTOs\DataBindingItem.cs" />
+    <Compile Include="DTOs\EMailMessageInfo.cs" />
+    <Compile Include="DTOs\GetDataRequest.cs" />
+    <Compile Include="DTOs\NavigationPageInfo.cs" />
+    <Compile Include="DTOs\OpenWindowInfo.cs" />
+    <Compile Include="DTOs\OpenWindowParameterInfo.cs" />
+    <Compile Include="DTOs\ProcessInfo.cs" />
+    <Compile Include="DTOs\RequestBase.cs" />
+    <Compile Include="DTOs\RequestCriteriaInfo.cs" />
+    <Compile Include="DTOs\ResponseBase.cs" />
+    <Compile Include="DTOs\ProcessResult.cs" />
+    <Compile Include="DTOs\TempPriceInfo.cs" />
+    <Compile Include="DTOs\UserInfo.cs" />
+    <Compile Include="DTOs\WindowInfo.cs" />
+    <Compile Include="DTOs\WindowParameterInfo.cs" />
+    <Compile Include="Managers\CacheManager.cs" />
+    <Compile Include="Managers\LogManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\CoreUtilities.cs" />
+    <Compile Include="Utilities\AppsTalkDeserializationBinder.cs" />
+    <Compile Include="Utilities\WebUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

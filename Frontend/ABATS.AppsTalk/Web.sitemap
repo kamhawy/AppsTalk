@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Default.aspx" title="Home"  description="Home">
+    <siteMapNode title="Administration" description="Administration">
+      <siteMapNode title="Applications" url="Views/Admin/Applications/ApplicationsList.aspx" description="Applications">
+        <siteMapNode url="Views/Admin/Applications/ApplicationView.aspx" title="Application"  description="Application" />
+        <siteMapNode url="Views/Admin/Applications/ApplicationDatabaseView.aspx" title="Application Database"  description="Application Database" />
+        <siteMapNode url="Views/Admin/Applications/ApplicationDatabaseQueryView.aspx" title="Application Database Query"  description="Application Database Query" />
+        <siteMapNode url="Views/Admin/Applications/ApplicationWebServiceView.aspx" title="Application Web Service"  description="Application Web Service" />
+        <siteMapNode url="Views/Admin/Applications/ApplicationWebServiceRequestView.aspx" title="Application Web Service Request"  description="Application Web Service Request" />
+      </siteMapNode>
+      <siteMapNode title="Integration Processes" url="Views/Admin/IntegrationProcesses/IntegrationProcessesList.aspx" description="Integration Processes">
+        <siteMapNode url="Views/Admin/IntegrationProcesses/IntegrationProcessView.aspx" title="Integration Process"  description="Integration Process" />
+        <siteMapNode url="Views/Admin/IntegrationProcesses/IntegrationProcessMappingView.aspx" title="Integration Process Mapping"  description="Integration Process Mapping" />
+        <siteMapNode url="Views/Admin/IntegrationProcesses/IntegrationAdapterView.aspx" title="Integration Adapter"  description="Integration Adapter" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Tools" description="Tools">
+      <siteMapNode url="Views/Tools/ExecuteIntegrationProcess.aspx" title="Execute Integration Process"  description="Execute Integration Process" />
+      <siteMapNode url="Views/Tools/IntegrationProcessHistory.aspx" title="Integration Process History"  description="Integration Process History" />
+      <siteMapNode url="Views/Tools/IntegrationTransactionDetailsView.aspx" title="Integration Transaction Details"  description="Integration Transaction Details" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
