@@ -1,0 +1,1 @@
+WincashWSAdapter Adapter
