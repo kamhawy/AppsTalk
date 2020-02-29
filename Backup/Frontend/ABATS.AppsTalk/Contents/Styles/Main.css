@@ -1,0 +1,1055 @@
+﻿/*------------- Common - Start -------------*/
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+#wrap
+{
+    width: 1100px;
+    margin: auto;
+}
+
+.headerContainer
+{
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #D7D7D7;
+    height: 60px;
+    background-image: url('../Images/bg_header.png');
+}
+
+.menuContainer
+{
+    width: 1102px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 34px;
+    vertical-align: middle;
+    background: url('../Images/menu_bb.png') repeat;
+    font-family: Calibri;
+}
+
+.siteMapContainer
+{
+    width: 99.5%;
+    margin-top: 11px;
+    padding-top: 3px;
+    padding-left: 5px;
+    border: 1px solid #D7D7D7;
+    height: 22px;
+    vertical-align: middle;
+    background: url('../Images/footer.png');
+}
+
+.contentContainer
+{
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #D7D7D7;
+    background-color: White;
+}
+
+.footerContainer
+{
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #D7D7D7;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url('../Images/footer.png');
+    text-align: center;
+    font-weight: bold;
+    font-family: tahoma;
+    font-size: 11px;
+    padding-top: 4px;
+    color: #5C5C5C;
+}
+
+.innerPanelContainer
+{
+    padding: 5px;
+}
+
+.childWindowContainer
+{
+    padding: 0px 5px 5px 5px;
+}
+
+.childWindowContainer2
+{
+    padding: 5px 5px 0px 5px;
+}
+
+.SystemNameText
+{
+    font-weight: bold;
+    font-family: Californian FB;
+    font-size: 22px;
+    text-shadow: 1px 1px 2px #DAE0EB;
+}
+
+.homeContainer
+{
+    text-align: center;
+    vertical-align: middle;
+    height: 450px;
+    width: 100%;
+}
+
+.HomeBoxItemText
+{
+    font-family: tahoma;
+    font-size: 14px;
+    color: #004182;
+    font-weight: bold;
+}
+
+.HomeBoxItemLink
+{
+    color: #004182;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.HomeBoxItemLink:hover
+{
+    color: #F58A29;
+}
+
+a
+{
+    color: #3F4C6B;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+a.main_no_border_image img
+{
+    border-style: none;
+}
+
+.BoxHeader
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #B3C1D5;
+    background: url('../Images/footer.png');
+    height: 24px;
+}
+
+.NoBorderLink
+{
+    border-style: none;
+    border-width: 0px;
+}
+
+.ItemColumn
+{
+    padding-left: 5px;
+    width: 100%;
+    vertical-align: top;
+}
+
+.ItemDescriptionLargeText
+{
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    color: Navy;
+}
+
+.ItemDescriptionLargeText2
+{
+    font-family: Candara;
+    font-size: 15px;
+    font-weight: bold;
+    color: Navy;
+}
+
+.ItemDescriptionSmallText
+{
+    font-family: Tahoma;
+    font-size: 12px;
+    color: Gray;
+}
+
+.ItemDescriptionSmallText2
+{
+    font-family: Candara;
+    font-size: 12px;
+    color: Gray;
+    line-height: 14px !important;
+}
+
+.HeaderUserInfo
+{
+    float: right;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+    color: #949494;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.HeaderSmallText
+{
+    color: #949494;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: tahoma;
+}
+
+.AppInfo
+{
+    margin-top: 5px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 11px;
+    font-family: Tahoma;
+    color: #6C6C6C;
+}
+
+.ApplicationInfo
+{
+    margin-top: 5px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10px;
+    font-family: Tahoma;
+    color: #8BAFE4;
+}
+
+.viewTabContainer
+{
+}
+
+.clear
+{
+    clear: both;
+}
+
+.ToolbarBox
+{
+    border: 1px solid #B3C1D5;
+    box-shadow: 1px 1px 1px #DAE0EB;
+    padding: 5px;
+    background-image: url('../Images/bg_box4.png');
+}
+
+/* Shadow Box - START */
+
+.ShadowBox
+{
+    border: 1px solid #B3C1D5;
+    box-shadow: 1px 1px 1px #DAE0EB;
+}
+
+.ShadowBoxHeader
+{
+    padding: 2px 3px 2px 3px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #B3C1D5;
+    color: Navy;
+    font-weight: bold;
+    background-image: url('../Images/footer.png');
+    vertical-align: middle;
+}
+
+.ShadowBoxHeaderGray
+{
+    padding: 3px 3px 0px 3px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #B3C1D5;
+    color: Navy;
+    font-weight: bold;
+    background-image: url('../Images/bg_Gray.png');
+    vertical-align: middle;
+}
+
+.ShadowBoxContents
+{
+    padding: 5px 5px 5px 5px;
+    vertical-align: middle;
+}
+
+/* Shadow Box - END */
+
+/* Form Table - START*/
+
+.FormTable
+{
+    border: 1px solid #B3C1D5;
+    display: table;
+    width: 100%;
+    font-family: Candara;
+}
+
+.FormTableRow
+{
+    height: 30px !important;
+    vertical-align: middle;
+    display: table-row;
+    border: 1px solid #B3C1D5;
+}
+
+.FormFieldLable
+{
+    border-color: #D6DDE9;
+    border-style: none solid dotted solid;
+    border-width: 0px 1px 1px 1px;
+    background-color: #FCFCFC;
+    padding: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #727272;
+    font-family: Candara;
+}
+
+.FormFieldInput
+{
+    padding: 3px;
+    border-color: #D6DDE9;
+    border-style: none none dotted none;
+    border-width: 0px 0px 1px 0px;
+    font-size: 14px;
+    font-family: Candara;
+}
+
+.FormFieldInputWithBorders
+{
+    display: table-column;
+    padding: 5px;
+    border-color: #D6DDE9;
+    border-style: dotted dotted dotted dotted;
+    border-width: 1px 1px 1px 1px;
+}
+
+/* Form Table - END */
+
+/* My Box - START */
+
+.MyBoxContainer
+{
+    border: 1px solid #B3C1D5;
+}
+
+.MyBoxHeaderShadowBox2 .MyBoxHeader2
+{
+    padding: 5px 7px 0px 5px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #B3C1D5;
+    height: 22px;
+    color: Navy;
+    font-weight: bold;
+    background-image: url('../Images/bg_box3.png');
+    text-align: left;
+    vertical-align: middle;
+}
+
+.MyBoxHeader3
+{
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #B3C1D5;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    vertical-align: middle;
+    font-family: tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4B6489;
+    padding: 5px 5px 5px 5px;
+    background: #e2e2e2; /* Old browsers */ /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UyZTJlMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMyJSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYzJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZWZlZmUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #e2e2e2 0%, #dbdbdb 32%, #e5e5e5 63%, #fefefe 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e2e2), color-stop(32%,#dbdbdb), color-stop(63%,#e5e5e5), color-stop(100%,#fefefe)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e2e2e2 0%,#dbdbdb 32%,#e5e5e5 63%,#fefefe 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e2e2e2 0%,#dbdbdb 32%,#e5e5e5 63%,#fefefe 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e2e2e2 0%,#dbdbdb 32%,#e5e5e5 63%,#fefefe 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #e2e2e2 0%,#dbdbdb 32%,#e5e5e5 63%,#fefefe 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-8 */
+}
+
+.MyBoxContents
+{
+    padding: 5px 5px 5px 5px;
+    vertical-align: middle;
+}
+
+.MyBoxContents2
+{
+    padding: 5px 2px 5px 5px;
+}
+
+.MyBoxContents3
+{
+    padding: 5px 5px 5px 5px;
+}
+
+/* My Box - END */
+
+.detailHeaderText
+{
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 14px;
+    color: #727272;
+    padding: 2px 5px 2px 2px;
+}
+
+.detailContainer
+{
+    padding: 2px 5px 5px 7px;
+}
+
+.SmallDescriptionText
+{
+    font-family: 'Times New Roman';
+    font-size: 14px;
+    color: #727272;
+}
+
+/* Menu - START */
+
+.MenuControl
+{
+    font-family: 'Traditional Arabic' !important;
+}
+
+.ModuleMenuItem
+{
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+
+.ChildMenuItem
+{
+    font-weight: bold !important;
+    font-size: 15px !important;
+    color: navy;
+    padding-right: 7px !important;
+    padding-left: 0px !important;
+}
+
+/* Menu - END */
+
+.LinkImage
+{
+    cursor: pointer;
+}
+
+.TelerikModalOverlay
+{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.LineDiv
+{
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-color: #B3C1D5;
+    height: 1px;
+    width: 98%;
+}
+
+.DottedLineDiv
+{
+    border-style: dotted;
+    border-width: 1px 0px 0px 0px;
+    border-color: #B3C1D5;
+    height: 1px;
+}
+
+.VerticalLineDiv
+{
+    border-style: solid;
+    border-width: 0px 0px 0px 1px;
+    border-color: #B3C1D5;
+    height: 98%;
+    width: 1px;
+}
+
+.VerticalTabStrip
+{
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #B3C1D5;
+}
+
+.GrayText
+{
+    color: GrayText;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.SmallGrayHeaderText
+{
+    color: GrayText;
+    font-family: Tahoma;
+    font-size: 13px;
+}
+
+.InnerHeaderGrayText
+{
+    color: GrayText;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.InnerHeaderGrayText2
+{
+    color: GrayText;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.SmallHeaderText2
+{
+    color: #3061BA;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.SmallWhiteText
+{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10px;
+    font-family: Tahoma;
+    color: #C3C3C3;
+}
+
+.BoxHeaderImage16
+{
+    width: 16px;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 3px;
+    padding-left: 5px;
+}
+
+.BoxHeaderImage32
+{
+    width: 32px;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 3px;
+    padding-left: 5px;
+}
+
+.BoxHeaderText
+{
+    font-family: Candara;
+    font-size: 15px !important;
+    font-weight: bold;
+    color: #000000;
+    vertical-align: middle;
+}
+
+.BoxHeaderTextLarge
+{
+    font-family: 'Traditional Arabic';
+    font-size: 22px !important;
+    font-weight: bold;
+    color: #0f0f46;
+    vertical-align: middle;
+}
+
+.InfoBox
+{
+    color: #862B2B;
+    width: 99.9%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    font-family: Californian FB;
+    font-size: 18px;
+    border: 1px solid #B3C1D5;
+    padding: 10px 0px 10px 0px;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.InnerHeaderText4
+{
+    font-family: Candara;
+    font-size: 15px;
+    color: #4B6489;
+    font-weight: bold;
+}
+
+.BlueBox
+{
+    vertical-align: middle;
+    font-weight: bold;
+    border: 1px solid #B3C1D5;
+    color: #000000;
+    background-image: url('../Images/footer.png');
+    padding: 0px 5px 0px 5px;
+}
+
+.DottedBorderBox
+{
+    vertical-align: middle;
+    border: 1px dotted #B3C1D5;
+    color: #4B6489;
+}
+
+.TahomaFontBox
+{
+    font-family: tahoma;
+    font-size: 12px !important;
+}
+
+.CandaraFontText
+{
+    font-family: Candara !important;
+}
+
+/* ---- Validation ---- */
+
+.validation
+{
+    color: #D63301;
+    background-color: #FFCCBA;
+    background-image: url('../Images/Validation.png');
+    font-family: Candara;
+}
+
+.validation ul
+{
+    padding-left: 40px;
+}
+
+.info, .success, .warning, .error, .validation
+{
+    border: 1px solid;
+    margin: 0px 0px;
+    padding: 15px 10px 15px 25px !important;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+.info
+{
+    color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url('../Images/info.png');
+}
+
+.success
+{
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image: url('../Images/success.png');
+}
+
+.warning
+{
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('../Images/warning.png');
+}
+
+.error
+{
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('../Images/error.png');
+}
+
+/* Used in window script */
+.ClientWindow
+{
+}
+
+/*----------- Common - End ---------------*/
+
+/*----------- Custom - Start -------------*/
+
+.ReportHeaderText
+{
+    font-weight: bold;
+    font-family: Californian FB;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px #DAE0EB;
+}
+
+.centerButtontd
+{
+    text-align: center;
+    border-right: 1px solid #eee;
+}
+
+.EntityDiv
+{
+    width: 100%;
+    margin: 5px;
+}
+
+.filterwindow
+{
+    width: 400px;
+    height: 400px;
+}
+
+.DownloadLink
+{
+    font-family: Candara;
+    font-size: 13px;
+    color: #004182;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.DownloadLink:hover
+{
+    color: #F58A29;
+}
+
+.UserNameText
+{
+    font-family: Candara;
+    font-size: 14px;
+    color: #004182;
+    font-weight: bold;
+}
+
+.UserInfoText
+{
+    font-family: Candara;
+    font-size: 12px;
+    font-weight: bold;
+    color: #949494;
+}
+
+.ExpandedCssClass .rpText
+{
+    font-family: Candara !important;
+    font-size: 14px !important;
+}
+
+.ClickedCssClass .rpText
+{
+    font-family: Candara !important;
+}
+
+.DisabledCssClass
+{
+    font-family: Candara !important;
+}
+
+.FocusedCssClass
+{
+    font-family: Candara !important;
+    font-size: 14px !important;
+}
+
+.SelectedCssClass .rpText
+{
+    font-family: Candara !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+.DetailTableStyle
+{
+    background-color: #FCFCFC !important;
+    margin: 5px 5px 5px 5px !important;
+}
+
+.GridItemStyle
+{
+    background-color: #F8F8F8 !important;
+}
+
+.GridAlternatingItemStyle
+{
+    background-color: #F8F8F8 !important;
+}
+
+.GridNoRecordsStyle
+{
+    font-size: 12px;
+    color: #8B94A0;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.NoRecords
+{
+    font-family: 'Traditional Arabic';
+    font-size: 20px;
+    color: rgb(92, 69, 105);
+    font-weight: bold;
+    color: #B93C3C;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ObjectTitle1
+{
+    font-family: Candara;
+    font-size: 25px;
+    color: rgb(79, 129, 189);
+}
+
+.DaysCount
+{
+    font-family: Candara;
+    font-size: 27px;
+    color: rgb(100, 100, 100);
+}
+
+.DaysCountSmall
+{
+    font-family: Candara;
+    font-size: 17px;
+    color: rgb(100, 100, 100);
+}
+
+.DaysCountText
+{
+    font-family: Candara;
+    font-size: 14px;
+    color: rgb(150, 150, 150);
+}
+
+.DaysCountTextSmall
+{
+    font-family: Candara;
+    font-size: 10px;
+    color: rgb(150, 150, 150);
+}
+
+.TypeLabel
+{
+    font-family: Candara;
+    font-size: 21px;
+    color: rgb(130, 124, 137);
+}
+
+.TypeLabelSmall
+{
+    font-family: Candara;
+    font-size: 19px;
+    color: rgb(192, 80, 77);
+}
+
+.InputLabel
+{
+    font-family: Candara;
+    font-size: 15px;
+    color: rgb(192, 80, 77);
+}
+
+.InputValue
+{
+    font-family: Candara;
+    font-size: 18px;
+    color: rgb(103, 114, 122);
+}
+
+.DateLabel
+{
+    font-family: Candara;
+    font-size: 14px;
+    color: rgb(247, 150, 70);
+}
+
+.DateLabelSmall
+{
+    font-family: Candara;
+    font-size: 12px;
+    color: rgb(247, 150, 70);
+}
+
+.DateValue
+{
+    font-family: Candara;
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+}
+
+.DateValueSmall
+{
+    font-family: Candara;
+    font-size: 14px;
+    color: rgb(100, 100, 100);
+}
+
+.InnerGroupHeaderGrayText
+{
+    font-family: 'Traditional Arabic';
+    color: navy;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.BoxSmallHeaderText
+{
+    font-family: 'Traditional Arabic';
+    color: GrayText;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.SmallGrayText
+{
+    color: orange;
+    font-family: 'Times New Roman';
+    font-size: 13px;
+}
+
+.MappingText
+{
+    color: #6600CC;
+    font-family: 'Times New Roman';
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.divButton
+{
+    border: 1px solid #B3C1D5;
+    padding: 5px;
+}
+
+.divButton:hover
+{
+    cursor: pointer;
+    background-color: #E6E6E6;
+}
+
+.divButtonSmall
+{
+    border: 1px solid #B3C1D5;
+    background-image: url('../Images/bg_box4.png');
+}
+
+.divButtonSmall:hover
+{
+    cursor: pointer;
+    background-color: #E6E6E6;
+    font-weight: bold;
+}
+
+.btnText
+{
+    font-size: 12px;
+    font-family: Tahoma;
+    padding-top: -1px;
+}
+
+.RunButton
+{
+    height: 55px;
+    width: 80px;
+    border: none;
+    background: #39C;
+    color: #FFF;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.RunButton:hover
+{
+    background: #75BBDD;
+    color: #303030;
+    cursor: pointer;
+}
+
+.ExecuteButton
+{
+    width: 1090px;
+    height: 50px;
+    background: #36F;
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+    cursor: pointer;
+    border: #999 solid 1px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.ExecuteButton:hover
+{
+    background: #CCC;
+    color: #36F;
+}
+
+.GridDynamicHeader
+{
+}
+
+/*----------- Custom - End -------------*/
+
+/*----------- Fonts - Start -------------*/
+
+.GridFonts
+{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 13px;
+}
+
+.Regular
+{
+    color: #000;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.Regularwhite
+{
+    color: #FFF;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.RegularBold
+{
+    color: #000;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.redTitle
+{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+    color: #900;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.red_error
+{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 11px;
+    color: #900;
+}
+
+/*----------- Fonts - End -------------*/
+

@@ -183,6 +183,7 @@
     <Content Include="Views\Tools\IntegrationTransactionDetailsView.aspx" />
     <Content Include="Contents\Scripts\Kendo\jquery.min.map" />
     <None Include="Properties\PublishProfiles\Published.pubxml" />
+    <None Include="Properties\PublishProfiles\Restore.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

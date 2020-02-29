@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.Master.cs" Inherits="ABATS.AppsTalk.Main" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" type="text/css" href="~/Contents/Styles/Main.css" runat="server" />
+    <script type="text/javascript" src="/ABATS.AppsTalk/Contents/Scripts/Core.js"></script>
+
+    <!-- Kendo UI Lib -->
+    <link href="~/Contents/Styles/Kendo/kendo.common.min.css" rel="stylesheet" runat="server"/>
+    <link href="~/Contents/Styles/Kendo/kendo.default.min.css" rel="stylesheet" runat="server"/>
+    <script type="text/javascript" src="/ABATS.AppsTalk/Contents/Scripts/Kendo/jquery.min.js"></script>
+    <script type="text/javascript" src="/ABATS.AppsTalk/Contents/Scripts/Kendo/kendo.all.min.js"></script>
+</head>
+<body>
+    <form id="formMain" runat="server">
+    <div id="wrap">
+        <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
