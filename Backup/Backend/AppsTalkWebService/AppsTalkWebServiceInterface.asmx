@@ -1,1 +1,0 @@
-﻿<%@ WebService Language="C#" CodeBehind="AppsTalkWebServiceInterface.asmx.cs" Class="AppsTalkWebService.AppsTalkWebServiceInterface" %>
